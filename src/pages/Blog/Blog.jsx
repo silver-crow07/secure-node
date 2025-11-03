@@ -1,37 +1,67 @@
-// src/pages/Blog/Blog.jsx
 import React from "react";
 import "./Blog.css";
-
-const articles = [
-  { title: "Top 10 Cybersecurity Threats in 2025", link: "#" },
-  { title: "Phishing Attacks: How to Stay Safe", link: "#" },
-];
-
-const caseStudies = [
-  { title: "How SecureNode helped Company X prevent a ransomware attack", link: "#" },
-];
+import { FaPenNib, FaLightbulb, FaLock, FaChartLine } from "react-icons/fa";
 
 function Blog() {
   return (
-    <div className="blog-page">
-      <h2>Latest Articles</h2>
-      <ul className="articles-list">
-        {articles.map((a, idx) => <li key={idx}><a href={a.link}>{a.title}</a></li>)}
-      </ul>
-
-      <h2>Case Studies</h2>
-      <ul className="case-studies-list">
-        {caseStudies.map((c, idx) => <li key={idx}><a href={c.link}>{c.title}</a></li>)}
-      </ul>
-
-      <section className="whitepapers">
-        <h3>Downloadable Whitepapers</h3>
-        <p>Provide your email to download.</p>
-        <form>
-          <input type="email" placeholder="Your Email" />
-          <button type="submit">Download</button>
-        </form>
+    <div className="blog-container">
+      
+      {/* Hero Section */}
+      <section className="blog-hero">
+        <h1>Cyber Insights & Security Trends</h1>
+        <p>Stay ahead with expert articles, analysis, and tips on cybersecurity and digital defense.</p>
       </section>
+
+      {/* Latest Articles Section */}
+      <section className="latest-blogs">
+        <h2>Latest Articles</h2>
+        <div className="blog-grid">
+          <div className="blog-card">
+            <FaPenNib className="blog-icon" />
+            <h3>Top 5 Cyber Threats of 2025</h3>
+            <p>Explore the latest vulnerabilities targeting businesses and how to mitigate them effectively.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div className="blog-card">
+            <FaLightbulb className="blog-icon" />
+            <h3>AI in Cybersecurity</h3>
+            <p>How artificial intelligence is transforming digital protection and threat prediction.</p>
+            <a href="#">Read More →</a>
+          </div>
+
+          <div className="blog-card">
+            <FaLock className="blog-icon" />
+            <h3>Building a Zero-Trust Environment</h3>
+            <p>Learn the principles and benefits of implementing zero-trust architecture in your organization.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Insights Section */}
+      <section className="insights">
+        <h2>Security Insights</h2>
+        <p>
+          Cybersecurity is not a one-time solution — it’s a continuous process of evolution. 
+          Through our blog, we aim to share actionable insights that empower organizations 
+          to protect data, maintain privacy, and operate with confidence in a digital world.
+        </p>
+
+        <div className="insight-points">
+          <div><FaChartLine /> Regular Industry Updates</div>
+          <div><FaLightbulb /> Expert Opinions & Analysis</div>
+          <div><FaPenNib /> Practical Security Tips</div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <h2>Want to Contribute or Learn More?</h2>
+        <p>Join our growing cybersecurity community — share your insights or explore more expert articles.</p>
+        <a href="/contact" className="cta-button">Get in Touch</a>
+      </section>
+
     </div>
   );
 }

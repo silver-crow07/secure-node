@@ -9,9 +9,10 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #050b14; /* match hero background */
   color: #111827;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -85,7 +86,7 @@ button:hover, .cta-button:hover {
   }
 
   main {
-    padding-top: 120px; /* adjust if navbar height changes */
+    padding-top: 100px;
   }
 }
 
@@ -108,6 +109,6 @@ button:hover, .cta-button:hover {
   }
 
   main {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 }

@@ -1,16 +1,16 @@
-// src/components/ServiceCard/ServiceCard.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 import "./ServiceCard.css";
 
 function ServiceCard({ title, description, image, link }) {
   return (
-    <div className="service-card">
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <Link to={link} className="cta-button">Learn More</Link>
-    </div>
+    <a href={link} className="service-card">
+      <div className="service-image">
+        <img src={image} alt={title} />
+      </div>
+      <h3 className="service-title">{title}</h3>
+      <p className="service-description">{description}</p>
+      <div className="service-glow"></div>
+    </a>
   );
 }
 

@@ -1,25 +1,90 @@
 /* src/pages/Home/Home.css */
+
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 6rem;
+  overflow-x: hidden;
 }
 
-.services-snapshot, .testimonials-section, .cta-section {
+/* Stats */
+.trust-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
   text-align: center;
 }
+.stats-box {
+  background: #0a0f2d;
+  padding: 2rem 3rem;
+  border-radius: 14px;
+  color: white;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+.stats-box h3 {
+  font-size: 2rem;
+}
 
-.services-cards, .testimonials-container {
+/* Services */
+.services-snapshot {
+  text-align: center;
+}
+.services-cards {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Industries */
+.industries-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.industry-logos {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.industry-logos img {
+  height: 60px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.industry-logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonials-section {
+  text-align: center;
+}
+.testimonials-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CTA */
+.cta-section {
+  text-align: center;
+}
 .cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #1d4ed8;
+  padding: 1rem 2.4rem;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
   color: white;
-  border-radius: 8px;
+  border-radius: 50px;
   text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0px 6px 18px rgba(29, 78, 216, 0.5);
+  transition: 0.3s;
+}
+.cta-button:hover {
+  transform: translateY(-3px);
 }

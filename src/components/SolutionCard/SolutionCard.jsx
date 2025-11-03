@@ -1,15 +1,22 @@
-// src/components/SolutionCard/SolutionCard.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 import "./SolutionCard.css";
+import { FiShield, FiLock, FiCloud, FiDatabase, FiCpu, FiUsers } from "react-icons/fi";
 
-function SolutionCard({ title, description, image, link }) {
+function SolutionCard({ title, description, image }) {
+  // Randomly pick an icon for a visually dynamic grid
+  const icons = [<FiShield />, <FiLock />, <FiCloud />, <FiDatabase />, <FiCpu />, <FiUsers />];
+  const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+
   return (
     <div className="solution-card">
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <Link to={link} className="cta-button">Learn More</Link>
+      <div className="solution-img-container">
+        <img src={image} alt={title} className="solution-img" />
+      </div>
+      <div className="solution-content">
+        <div className="solution-icon">{randomIcon}</div>
+        <h3 className="solution-title">{title}</h3>
+        <p className="solution-description">{description}</p>
+      </div>
     </div>
   );
 }

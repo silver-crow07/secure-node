@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -12,6 +11,7 @@ import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import Solutions from "./pages/Solutions/Solutions";
 import SolutionDetails from "./pages/SolutionDetails/SolutionDetails";
 import Industries from "./pages/Industries/Industries";
+import IndustryDetails from "./pages/IndustryDetails/IndustryDetails"; // ✅ added import
 import Blog from "./pages/Blog/Blog";
 import Careers from "./pages/Careers/Careers";
 import Contact from "./pages/Contact/Contact";
@@ -33,6 +33,7 @@ function App() {
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/:id" element={<SolutionDetails />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/:id" element={<IndustryDetails />} /> {/* ✅ added route */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />

@@ -1,12 +1,117 @@
-/* src/pages/Services/Services.css */
 .services-page {
-  padding: 2rem;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #050b14;
+  padding: 60px 8% 80px; /* Reduced top padding for less gap below navbar */
   text-align: center;
+  overflow: hidden;
 }
 
+/* Background grid animation */
+.services-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#0ff2, #0ff2),
+    repeating-linear-gradient(90deg, #0ff2 0px, #0ff2 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(0deg, #0ff2 0px, #0ff2 1px, transparent 1px, transparent 40px);
+  opacity: 0.08;
+  z-index: 1;
+  animation: gridScroll 14s linear infinite;
+}
+
+@keyframes gridScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+/* Content container */
+.services-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* Heading */
+.services-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #00faff;
+  text-shadow: 0 0 20px #00faff;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #ff00d9;
+  text-shadow: 0 0 15px #ff00d9;
+}
+
+/* Subtext */
+.services-subtext {
+  font-size: 1.1rem;
+  color: #c7d8ee;
+  max-width: 700px;
+  margin: 0 auto 45px;
+  opacity: 0.85;
+}
+
+/* Grid layout — 3xN format */
 .services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Reduced gap for tighter layout */
+  justify-items: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .services-page {
+    padding: 50px 6% 70px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-page {
+    padding: 45px 5% 60px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-heading {
+    font-size: 2rem;
+  }
+
+  .services-subtext {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-page {
+    padding: 40px 5% 50px;
+  }
+
+  .services-heading {
+    font-size: 1.7rem;
+  }
+
+  .services-subtext {
+    font-size: 0.9rem;
+  }
 }
