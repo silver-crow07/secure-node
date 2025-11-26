@@ -1,39 +1,132 @@
-/* src/pages/Careers/Careers.css */
+/* ================================
+   CAREERS PAGE – MODERN WHITE + BLUE
+================================ */
+
 .careers-page {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  padding: 20px 8% 60px; 
+  background: #f8fafc;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
-ul {
+/* HEADINGS */
+.careers-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.careers-subtitle {
+  text-align: center;
+  color: #475569;
+  font-size: 17px;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+/* POSITIONS */
+.positions-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.positions-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
 }
 
-li a {
-  text-decoration: none;
-  color: #1d4ed8;
+.position-item {
+  background: #ffffff;
+  border: 1px solid #cce5ff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  color: #087eff;
 }
 
+.position-item:hover {
+  background: #e9f3ff;
+  transform: translateY(-3px);
+  border-color: #087eff;
+}
+
+/* APPLY FORM SECTION */
+.application-form {
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  border: 1px solid #e2e8f0;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.application-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* FORM INPUTS */
 .application-form form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 15px;
 }
 
 .application-form input,
 .application-form textarea {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  background: #ffffff;
+  transition: 0.3s ease;
 }
 
+.application-form input:focus,
+.application-form textarea:focus {
+  border-color: #087eff;
+  box-shadow: 0 0 8px rgba(8,126,255,0.3);
+}
+
+/* SUBMIT BUTTON */
 .application-form button {
-  padding: 0.5rem 1rem;
-  background-color: #1d4ed8;
-  color: white;
+  background: #087eff;
   border: none;
-  border-radius: 5px;
+  padding: 14px;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 10px;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.application-form button:hover {
+  background: #006edc;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .careers-title {
+    font-size: 28px;
+  }
+
+  .application-form {
+    padding: 25px;
+  }
 }

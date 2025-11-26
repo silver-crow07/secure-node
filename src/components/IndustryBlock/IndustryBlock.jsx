@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./IndustryBlock.css";
+
 import {
   FaHospital,
   FaUniversity,
@@ -58,28 +59,36 @@ const industries = [
 function IndustryBlock() {
   const navigate = useNavigate();
 
-  const handleCardClick = (id) => {
+  const handleKnowMore = (id) => {
     navigate(`/industries/${id}`);
   };
 
   return (
-    <section className="industries-section">
-      <h2 className="industries-title">Industries We Secure</h2>
+    <section className="industries-wrapper">
+      <h1 className="industries-title">
+        Industries <span>We Secure</span>
+      </h1>
+
       <p className="industries-subtitle">
-        SecureNode provides tailored cybersecurity solutions across various
-        sectors, protecting data, infrastructure, and reputation.
+        SecureNode provides tailored cybersecurity solutions across various sectors.
       </p>
 
       <div className="industries-grid">
-        {industries.map((industry, index) => (
-          <div
-            key={index}
-            className="industry-card"
-            onClick={() => handleCardClick(industry.id)}
-          >
-            <div className="industry-icon">{industry.icon}</div>
-            <h3 className="industry-title">{industry.title}</h3>
-            <p className="industry-description">{industry.description}</p>
+        {industries.map((industry) => (
+          <div className="industryCard" key={industry.id}>
+            <div className="industryCard-icon">
+              {industry.icon}
+            </div>
+
+            <h3>{industry.title}</h3>
+            <p>{industry.description}</p>
+
+            <button
+              className="industryCard-btn"
+              onClick={() => handleKnowMore(industry.id)}
+            >
+              Know More
+            </button>
           </div>
         ))}
       </div>
@@ -88,3 +97,4 @@ function IndustryBlock() {
 }
 
 export default IndustryBlock;
+

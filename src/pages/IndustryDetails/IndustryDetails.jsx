@@ -2,19 +2,11 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./IndustryDetails.css";
-import {
-  FaHospital,
-  FaUniversity,
-  FaShoppingCart,
-  FaLandmark,
-  FaMoneyBillWave,
-  FaCode,
-} from "react-icons/fa";
 
 const industryDetailsData = {
   finance: {
     title: "Finance & Banking",
-    icon: <FaMoneyBillWave className="industry-icon" />,
+    icon: "💰",
     overview:
       "SecureNode provides end-to-end protection for financial institutions, ensuring the integrity and confidentiality of digital transactions and customer data.",
     challenges: [
@@ -38,7 +30,7 @@ const industryDetailsData = {
 
   healthcare: {
     title: "Healthcare",
-    icon: <FaHospital className="industry-icon" />,
+    icon: "🏥",
     overview:
       "SecureNode empowers healthcare organizations with HIPAA-compliant security frameworks, ensuring medical data protection and operational continuity.",
     challenges: [
@@ -62,7 +54,7 @@ const industryDetailsData = {
 
   education: {
     title: "Education",
-    icon: <FaUniversity className="industry-icon" />,
+    icon: "🎓",
     overview:
       "SecureNode helps educational institutions defend student and faculty data from cyber threats while maintaining a seamless digital learning experience.",
     challenges: [
@@ -83,78 +75,6 @@ const industryDetailsData = {
     caseStudy:
       "A university network prevented 12 major phishing incidents through SecureNode’s awareness training and secure LMS integration.",
   },
-
-  government: {
-    title: "Government",
-    icon: <FaLandmark className="industry-icon" />,
-    overview:
-      "SecureNode protects government data, critical infrastructure, and citizen records with advanced cybersecurity frameworks and monitoring systems.",
-    challenges: [
-      "Nation-state cyberattacks",
-      "Data theft targeting citizen records",
-      "Outdated legacy infrastructure",
-    ],
-    approach: [
-      "Critical infrastructure protection (CIP)",
-      "Endpoint detection and response (EDR)",
-      "Threat intelligence and SOC integration",
-    ],
-    benefits: [
-      "Improved national cyber resilience",
-      "Real-time threat mitigation",
-      "Confidentiality of government data",
-    ],
-    caseStudy:
-      "A central government agency increased its cyber resilience by 75% using SecureNode’s continuous threat intelligence framework.",
-  },
-
-  ecommerce: {
-    title: "E-Commerce",
-    icon: <FaShoppingCart className="industry-icon" />,
-    overview:
-      "SecureNode ensures secure online transactions, customer data protection, and brand integrity for e-commerce platforms worldwide.",
-    challenges: [
-      "Payment frauds and fake orders",
-      "Customer data leaks",
-      "Bot and DDoS attacks on platforms",
-    ],
-    approach: [
-      "End-to-end encryption for payments",
-      "Bot and DDoS mitigation systems",
-      "Vulnerability scanning and threat analytics",
-    ],
-    benefits: [
-      "Fraud-free online transactions",
-      "Enhanced platform uptime",
-      "Trustworthy shopping experience for users",
-    ],
-    caseStudy:
-      "A global e-commerce company prevented data theft attempts and achieved 99.9% uptime using SecureNode’s adaptive fraud defense systems.",
-  },
-
-  it: {
-    title: "IT & Software Companies",
-    icon: <FaCode className="industry-icon" />,
-    overview:
-      "SecureNode assists IT and software companies in securing their development environments, APIs, and cloud infrastructure.",
-    challenges: [
-      "Unsecured APIs and source code leaks",
-      "Cloud misconfigurations",
-      "Insider threats within dev teams",
-    ],
-    approach: [
-      "Application security testing (DAST & SAST)",
-      "Cloud posture management",
-      "Identity and access management integration",
-    ],
-    benefits: [
-      "Reduced vulnerabilities in applications",
-      "Safer CI/CD pipeline operations",
-      "Strengthened overall security posture",
-    ],
-    caseStudy:
-      "A SaaS firm minimized API breaches by 94% after adopting SecureNode’s application security and cloud governance solutions.",
-  },
 };
 
 function IndustryDetails() {
@@ -164,60 +84,68 @@ function IndustryDetails() {
 
   if (!industry)
     return (
-      <div className="industry-not-found">
-        <h2>Industry Not Found</h2>
-        <button onClick={() => navigate("/industries")}>Back to Industries</button>
-      </div>
+      <h2 className="industry-details-not-found">Industry Not Found</h2>
     );
 
   return (
-    <div className="industry-details-container">
-      <div className="industry-header">
-        {industry.icon}
-        <h1>{industry.title}</h1>
-      </div>
+    <div className="industry-details-page">
+      <div className="industry-details-container">
 
-      <p className="industry-overview">{industry.overview}</p>
+        <h2 className="industry-details-title">
+          {industry.icon} {industry.title}
+        </h2>
 
-      <section className="industry-section">
-        <h3>Challenges</h3>
-        <ul>
-          {industry.challenges.map((challenge, i) => (
-            <li key={i}>{challenge}</li>
-          ))}
-        </ul>
-      </section>
+        <p className="industry-details-description">{industry.overview}</p>
 
-      <section className="industry-section">
-        <h3>Our Approach</h3>
-        <ul>
-          {industry.approach.map((step, i) => (
-            <li key={i}>{step}</li>
-          ))}
-        </ul>
-      </section>
+        {/* Challenges */}
+        <section className="industry-details-section">
+          <h3>Challenges</h3>
+          <ul>
+            {industry.challenges.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="industry-section">
-        <h3>Benefits</h3>
-        <ul>
-          {industry.benefits.map((benefit, i) => (
-            <li key={i}>{benefit}</li>
-          ))}
-        </ul>
-      </section>
+        {/* Approach */}
+        <section className="industry-details-section">
+          <h3>Our Approach</h3>
+          <ul>
+            {industry.approach.map((step, i) => (
+              <li key={i}>{step}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="industry-section">
-        <h3>Case Study</h3>
-        <p>{industry.caseStudy}</p>
-      </section>
+        {/* Benefits */}
+        <section className="industry-details-section">
+          <h3>Benefits</h3>
+          <ul>
+            {industry.benefits.map((b, i) => (
+              <li key={i}>{b}</li>
+            ))}
+          </ul>
+        </section>
 
-      <div className="industry-actions">
-        <button onClick={() => navigate("/industries")} className="back-button">
-          ← Back to Industries
-        </button>
-        <a href="/contact" className="cta-button">
-          Talk to Our Experts
-        </a>
+        {/* Case Study */}
+        <section className="industry-details-section">
+          <h3>Case Study</h3>
+          <p>{industry.caseStudy}</p>
+        </section>
+
+        {/* Buttons */}
+        <div className="industry-details-buttons">
+          <button
+            onClick={() => navigate("/industries")}
+            className="industry-details-back-btn"
+          >
+            ← Back to Industries
+          </button>
+
+          <a href="/contact" className="industry-details-cta-btn">
+            Talk to Our Experts
+          </a>
+        </div>
       </div>
     </div>
   );

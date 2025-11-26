@@ -1,68 +1,69 @@
-.solutions-page {
-  padding: 80px 8% 60px;
-  background: radial-gradient(ellipse at top, #0b0b1b 0%, #000010 100%);
-  min-height: 100vh;
-  color: #fff;
+.solutions-wrapper {
+  width: 100%;
+  padding-top: 20px;
+  background: #f8fafc;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
-/* Reduce padding near navbar */
-@media (max-width: 992px) {
-  .solutions-page {
-    padding-top: 70px;
-  }
+/* TITLE */
+.solutions-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
 }
 
-.solutions-heading {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #00f6ff;
-  text-shadow: 0 0 15px #00f6ff;
-  margin-bottom: 15px;
+.solutions-title span {
+  color: #087EFF;
 }
 
-.solutions-subtext {
-  max-width: 700px;
-  margin: 0 auto 50px;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #c9d5f5;
-  opacity: 0.9;
+/* SUBTITLE */
+.solutions-subtitle {
+  font-size: 18px;
+  color: #5d5d5d;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
 }
 
-/* Grid layout for solution cards */
+/* GRID */
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
-  justify-content: center;
-  align-items: stretch;
-  padding: 0 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 0 20px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .solutions-heading {
-    font-size: 2rem;
+/* RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .solutions-subtext {
-    margin-bottom: 40px;
-    font-size: 0.95rem;
+  .solutions-title {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .solutions-wrapper {
+    padding: 100px 25px 60px;
   }
 
   .solutions-grid {
-    gap: 25px;
+    grid-template-columns: 1fr;
   }
 
-  .solution-card-wrapper {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .solutions-title {
+    font-size: 30px;
+  }
+
+  .solutions-subtitle {
+    font-size: 16px;
+  }
 }
 
-.solution-card-wrapper:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(0, 246, 255, 0.3);
-}
-
-}

@@ -1,24 +1,27 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./SolutionCard.css";
-import { FiShield, FiLock, FiCloud, FiDatabase, FiCpu, FiUsers } from "react-icons/fi";
 
-function SolutionCard({ title, description, image }) {
-  // Randomly pick an icon for a visually dynamic grid
-  const icons = [<FiShield />, <FiLock />, <FiCloud />, <FiDatabase />, <FiCpu />, <FiUsers />];
-  const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+export default function SolutionCard({ id, title, description, image }) {
+  const navigate = useNavigate();
+
+  const handleKnowMore = (e) => {
+    e.stopPropagation();
+    navigate(`/solutions/${id}`);
+  };
 
   return (
-    <div className="solution-card">
-      <div className="solution-img-container">
-        <img src={image} alt={title} className="solution-img" />
+    <div className="solutionCard">
+      <div className="solutionCard-img">
+        <img src={image} alt={title} />
       </div>
-      <div className="solution-content">
-        <div className="solution-icon">{randomIcon}</div>
-        <h3 className="solution-title">{title}</h3>
-        <p className="solution-description">{description}</p>
-      </div>
+
+      <h3 className="solutionCard-title">{title}</h3>
+      <p className="solutionCard-description">{description}</p>
+
+      <button className="solutionCard-btn" onClick={handleKnowMore}>
+        Know More
+      </button>
     </div>
   );
 }
-
-export default SolutionCard;

@@ -1,76 +1,114 @@
-.industries-section {
-  padding: 80px 10%;
-  background: #050510;
+/* Wrapper */
+.industries-wrapper {
+  background: #f8fafc;
   text-align: center;
-  color: white;
-  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Title */
 .industries-title {
-  font-size: 2.5rem;
+  font-size: 38px;
+  font-weight: 800;
+  color: #0f172a;
   margin-bottom: 10px;
-  color: #00f6ff;
-  text-shadow: 0 0 12px #00f6ff;
+}
+
+.industries-title span {
+  color: #087eff;
 }
 
 .industries-subtitle {
-  font-size: 1.1rem;
-  color: #bcbcbc;
-  margin-bottom: 50px;
+  max-width: 750px;
+  margin: 0 auto 50px;
+  color: #475569;
+  font-size: 17px;
 }
 
+/* GRID */
 .industries-grid {
   display: grid;
-  gap: 35px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.industry-card {
-  background: rgba(0, 5, 15, 0.75);
-  border: 1px solid #00f6ff;
-  border-radius: 14px;
-  padding: 35px 25px;
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
-  transition: 0.4s ease;
-  cursor: pointer;
+/* INDUSTRY CARD (Same as serviceCard) */
+.industryCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
   position: relative;
-  overflow: hidden;
-}
-
-.industry-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  border-color: #ff00d9;
-  box-shadow: 0 0 28px rgba(255, 0, 217, 0.6);
-  background: rgba(10, 0, 23, 0.85);
-}
-
-.industry-icon {
-  font-size: 3rem;
-  margin-bottom: 18px;
-  color: #00f6ff;
-  text-shadow: 0 0 15px #00f6ff;
+  text-align: center;
+  border: 1px solid #cce5ff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
 }
 
-.industry-card:hover .industry-icon {
-  color: #ff00d9;
-  text-shadow: 0 0 15px #ff00d9;
+.industryCard:hover {
+  transform: translateY(-8px);
+  border-color: #087eff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.industry-title {
+/* ICON AREA (like image space) */
+.industryCard-icon {
+  font-size: 55px;
+  color: #087eff;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.industryCard h3 {
   font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #087eff;
+}
+
+.industryCard p {
+  font-size: 1rem;
+  color: #444;
+  min-height: 55px;
+  margin-bottom: 55px;
+}
+
+/* BUTTON (same as serviceCard) */
+.industryCard-btn {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 22px;
+  background: #087eff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
   font-weight: 600;
-  transition: color 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.industry-card:hover .industry-title {
-  color: #ff00d9;
+.industryCard-btn:hover {
+  background: #005ecc;
+  transform: translateX(-50%) translateY(-3px);
 }
 
-.industry-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.85;
-  color: #e0e0e0;
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-title {
+    font-size: 28px;
+  }
+
+  .industries-subtitle {
+    font-size: 15px;
+  }
 }

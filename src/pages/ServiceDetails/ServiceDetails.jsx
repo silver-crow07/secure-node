@@ -178,7 +178,10 @@ function ServiceDetails() {
           <Link to="/services" className="service-details-back-btn">
             <FaArrowLeft /> Back to Services
           </Link>
-          <a href="/contact" className="service-details-cta-btn">
+          <a
+            href={`mailto:sam.ram.rom07@gmail.com?subject=Request for ${service.title}&body=Hello SecureNode Team,%0D%0A%0D%0AI am interested in your service: ${service.title}.%0D%0APlease contact me with more details.%0D%0A%0D%0AThank you!`}
+            className="service-details-cta-btn"
+          >
             Request This Service
           </a>
         </div>

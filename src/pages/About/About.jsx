@@ -13,140 +13,100 @@ import { MdSecurity } from "react-icons/md";
 
 function About() {
   return (
-    <section className="about-page">
-      <div className="about-overlay"></div>
+    <section className="about-wrapper">
 
-      <div className="about-content">
-        {/* Hero Section */}
-        <div className="about-hero">
-          <h1>
-            Empowering a <span className="highlight">Secure Digital Future</span>
-          </h1>
+      {/* HERO */}
+      <div className="about-hero-light">
+        <h1>About <span>SecureNode</span></h1>
+        <p>
+          SecureNode delivers intelligent, modern and scalable cybersecurity
+          solutions that empower businesses to grow safely in the digital era.
+        </p>
+      </div>
+
+      {/* WHO WE ARE */}
+      <div className="about-section-light">
+        <h2 className="section-heading">Who We Are</h2>
+        <p>
+          SecureNode is a modern cybersecurity and IT solutions company focused
+          on building scalable, secure and future-ready digital systems. Our
+          team blends automation, analytics and secure engineering to protect
+          businesses from digital threats.
+        </p>
+      </div>
+
+      {/* MISSION + VISION */}
+      <div className="about-dual-box">
+        <div className="about-card">
+          <h3>Our Mission</h3>
           <p>
-            At <strong>SecureNode</strong>, we protect businesses, data, and
-            individuals from ever-evolving cyber threats through AI-driven
-            intelligence, deep network visibility, and proactive defense
-            strategies.
+            To secure organizations with intelligent and automated digital
+            protection that prevents threats before they begin.
           </p>
         </div>
 
-        {/* Who We Are */}
-        <div className="about-section">
-          <h2>Who We Are</h2>
+        <div className="about-card">
+          <h3>Our Vision</h3>
           <p>
-            SecureNode is a global cybersecurity firm focused on building
-            intelligent, adaptive, and proactive defense systems. We integrate
-            machine learning, real-time analytics, and ethical hacking to
-            safeguard enterprises from ransomware, phishing, and insider threats.
-          </p>
-          <p className="highlight">
-            Our goal is simple — <strong>to create digital confidence</strong> so
-            businesses can innovate fearlessly in a secure environment.
+            A world where innovation thrives safely with complete trust in
+            cybersecurity and technology infrastructure.
           </p>
         </div>
+      </div>
 
-        {/* Mission and Vision */}
-        <div className="about-section">
-          <h2>Our Mission</h2>
-          <p>
-            To empower every organization with next-generation cybersecurity
-            solutions that prevent, detect, and respond to cyber attacks before
-            they impact operations. We believe in resilience over reaction.
-          </p>
+      {/* OUR APPROACH */}
+      <div className="about-section-light">
+        <h2 className="section-heading">Our Approach</h2>
 
-          <h2>Our Vision</h2>
-          <p>
-            A world where every digital entity — from startups to global
-            enterprises — operates confidently with uncompromised trust,
-            innovation, and integrity.
-          </p>
+        <div className="about-grid">
+          <div className="icon-card"><FaBrain /> Adaptive Intelligence</div>
+          <div className="icon-card"><MdSecurity /> Zero-Trust Security</div>
+          <div className="icon-card"><FaNetworkWired /> Deep Threat Monitoring</div>
+          <div className="icon-card"><FaFingerprint /> Identity Protection</div>
         </div>
+      </div>
 
-        {/* Approach */}
-        <div className="philosophy">
-          <h2>Our Approach</h2>
-          <p>
-            Cybersecurity is not a product — it’s a continuous strategy. At
-            SecureNode, we combine automation with human expertise to ensure
-            threats are identified and neutralized before they strike.
-          </p>
+      {/* WHY SECURENODE */}
+      <div className="about-section-light">
+        <h2 className="section-heading">Why SecureNode?</h2>
 
-          <div className="philosophy-grid">
-            <div>
-              <FaBrain /> Adaptive Intelligence
-            </div>
-            <div>
-              <MdSecurity /> Zero-Trust Architecture
-            </div>
-            <div>
-              <FaNetworkWired /> Proactive Threat Hunting
-            </div>
-            <div>
-              <FaFingerprint /> Identity Protection
-            </div>
+        <div className="compare-grid">
+          <div className="compare-box">
+            <h3>We Provide</h3>
+            <ul>
+              <li><FaShieldAlt /> Intelligent Threat Detection</li>
+              <li><FaUserSecret /> Ethical Hacking & Audits</li>
+              <li><FaLock /> Secure Cloud Infrastructure</li>
+              <li><FaNetworkWired /> 24/7 Monitoring & Response</li>
+            </ul>
           </div>
 
-          <p className="highlight">
-            We don’t just secure systems — <strong>we build digital resilience.</strong>
-          </p>
-        </div>
-
-        {/* Why Choose SecureNode */}
-        <div className="difference">
-          <h2>Why Choose SecureNode</h2>
-          <div className="comparison-table">
-            <div className="column">
-              <h3>We Offer</h3>
-              <ul>
-                <li>
-                  <FaShieldAlt /> Proactive Threat Intelligence
-                </li>
-                <li>
-                  <FaUserSecret /> Ethical Hacking & Vulnerability Testing
-                </li>
-                <li>
-                  <FaLock /> AI-Based Attack Prevention
-                </li>
-                <li>
-                  <FaNetworkWired /> 24/7 Monitoring & Response
-                </li>
-              </ul>
-            </div>
-
-            <div className="column">
-              <h3>Others Give</h3>
-              <ul>
-                <li>Reactive Security Posture</li>
-                <li>Generic Firewalls & Tools</li>
-                <li>Signature-Based Detection Only</li>
-                <li>Delayed Incident Response</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Core Values */}
-        <div className="values">
-          <h2>Core Values</h2>
-          <div className="values-grid">
-            <div>
-              <FaShieldAlt /> Integrity — Transparency in protection
-            </div>
-            <div>
-              <FaUserSecret /> Excellence — Precision in every defense
-            </div>
-            <div>
-              <FaBrain /> Resilience — Anticipate. Adapt. Overcome.
-            </div>
-            <div>
-              <FaNetworkWired /> Innovation — Secure solutions for the future
-            </div>
-            <div>
-              <FaGlobe /> Collaboration — Strength through partnership
-            </div>
+          <div className="compare-box">
+            <h3>Traditional Approach</h3>
+            <ul>
+              <li>Reactive Protection</li>
+              <li>Basic Firewall Systems</li>
+              <li>Slow Incident Response</li>
+              <li>No Intelligent Data Insights</li>
+            </ul>
           </div>
         </div>
       </div>
+
+      {/* CORE VALUES */}
+      <div className="about-section-light">
+        <h2 className="section-heading">Core Values</h2>
+
+        <div className="values-grid">
+          <div className="value-card"><FaShieldAlt /> Integrity</div>
+          <div className="value-card"><FaUserSecret /> Excellence</div>
+          <div className="value-card"><FaBrain /> Innovation</div>
+          <div className="value-card"><FaNetworkWired /> Collaboration</div>
+          <div className="value-card"><FaGlobe /> Global Impact</div>
+        </div>
+      </div>
+
+
     </section>
   );
 }

@@ -1,161 +1,172 @@
-.solution-details-container {
-  max-width: 900px;
-  margin: 100px auto 60px;
-  padding: 2.5rem;
-  background: radial-gradient(circle at top, #061020, #000010);
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-  color: #e6ecff;
+/* ================================
+   SOLUTION DETAILS (LIGHT + MODERN)
+================================ */
+
+.solution-details-page {
+  background: #f8fafc;
+  padding: 40px 40px 60px;
+  display: flex;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
-  animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Header Section */
-.solution-header {
+.solution-details-container {
+  max-width: 950px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 45px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+/* HEADING */
+.solution-details-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.solution-details-description {
+  text-align: center;
+  font-size: 17px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* SECTIONS */
+.solution-details-section {
+  margin-bottom: 35px;
+  padding: 20px 25px;
+  background: #fefefe;
+  border-left: 4px solid #087eff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.solution-details-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 25px;
+  gap: 10px;
 }
 
-.solution-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #00eaff;
-  text-shadow: 0 0 20px #00eaff;
+.icon {
+  color: #087eff;
+  font-size: 22px;
 }
 
-.solution-icon {
-  font-size: 2.5rem;
-  color: #00eaff;
-  filter: drop-shadow(0 0 10px #00eaff);
-  animation: pulseGlow 2s infinite alternate;
+/* LISTS */
+.solution-details-section ul {
+  margin-left: 5px;
 }
 
-/* Description */
-.solution-description {
-  text-align: center;
-  font-size: 1.05rem;
-  color: #c7d8ee;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-/* Sections */
-.solution-section {
-  margin-bottom: 35px;
-  animation: fadeSlide 1.1s ease;
-}
-
-.solution-section h3 {
-  color: #00f6ff;
-  font-size: 1.4rem;
+.solution-details-section li {
+  font-size: 16px;
+  color: #374151;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px #00f6ff;
-}
-
-.solution-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.solution-section li {
-  padding: 6px 0;
-  position: relative;
-  color: #c7d8ee;
-  transition: all 0.3s ease;
-}
-
-.solution-section li::before {
-  content: "⚡";
-  color: #00f6ff;
-  margin-right: 8px;
-}
-
-.solution-section li:hover {
-  color: #ffffff;
-  transform: translateX(5px);
-}
-
-/* Case Study */
-.solution-section p {
-  color: #c9d5f5;
-  line-height: 1.7;
-  background: rgba(0, 255, 255, 0.05);
-  border-left: 3px solid #00f6ff;
-  padding: 10px 15px;
-  border-radius: 8px;
-}
-
-/* Buttons */
-.solution-actions {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
+  align-items: center;
+  gap: 8px;
 }
 
-.back-button,
-.cta-button {
-  padding: 0.9rem 1.8rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+.list-icon {
+  color: #087eff;
+}
+
+/* BUTTONS */
+.solution-details-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.solution-details-back-btn,
+.solution-details-cta-btn {
+  padding: 12px 20px;
+  font-size: 15px;
   font-weight: 600;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.back-button {
-  background: transparent;
-  border: 1.5px solid #00f6ff;
-  color: #00f6ff;
+/* BACK BUTTON */
+.solution-details-back-btn {
+  background: #e2e8f0;
+  color: #1e293b;
 }
 
-.back-button:hover {
-  background: #00f6ff;
-  color: #000010;
-  box-shadow: 0 0 15px #00f6ff;
+.solution-details-back-btn:hover {
+  background: #cbd5e1;
 }
 
-.cta-button {
-  background: #00f6ff;
-  color: #000010;
-  box-shadow: 0 0 20px #00f6ff;
+/* CTA BUTTON */
+.solution-details-cta-btn {
+  background: #087eff;
+  color: white;
 }
 
-.cta-button:hover {
-  background: #ff00d9;
-  color: #fff;
-  box-shadow: 0 0 25px #ff00d9;
+.solution-details-cta-btn:hover {
+  background: #006fde;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+/* 404 */
+.solution-details-not-found {
+  padding: 150px 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #ef4444;
 }
 
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
 
-@keyframes pulseGlow {
-  from { filter: drop-shadow(0 0 8px #00f6ff); }
-  to { filter: drop-shadow(0 0 20px #00f6ff); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .solution-details-container {
-    padding: 1.5rem;
+    padding: 35px 30px;
   }
-  .solution-header h1 {
-    font-size: 1.8rem;
+
+  .solution-details-title {
+    font-size: 30px;
   }
-  .solution-icon {
-    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .solution-details-page {
+    padding: 110px 25px 50px;
+  }
+
+  .solution-details-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .solution-details-container {
+    padding: 30px;
+  }
+
+  .solution-details-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .solution-details-title {
+    font-size: 23px;
+  }
+
+  .solution-details-section {
+    padding: 18px;
   }
 }

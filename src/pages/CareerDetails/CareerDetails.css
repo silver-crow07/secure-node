@@ -1,0 +1,87 @@
+.career-details-page {
+  background: #f8fafc;
+  padding: 80px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.career-box {
+  max-width: 900px;
+  background: white;
+  padding: 45px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.career-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.career-overview {
+  text-align: center;
+  font-size: 17px;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.career-section {
+  background: #ffffff;
+  border-left: 4px solid #087eff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.career-section h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.career-section ul li {
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.career-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.back-btn {
+  background: #e2e8f0;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  background: #cbd5e1;
+}
+
+.apply-btn {
+  background: #087eff;
+  padding: 12px 22px;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.apply-btn:hover {
+  background: #006fde;
+}
+
+@media (max-width: 768px) {
+  .career-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

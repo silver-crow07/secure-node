@@ -1,14 +1,145 @@
-/* src/pages/Contact/Contact.css */
+/* ==========================
+   CONTACT PAGE WRAPPER
+========================== */
 .contact-page {
+  max-width: 900px;
+  margin: 90px auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ddecff;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.contact-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-header h2 {
+  color: #087eff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contact-header p {
+  color: #444;
+  margin-top: 8px;
+}
+
+/* ==========================
+   SECTION CARD UI
+========================== */
+.contact-card {
+  background: #f6faff;
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-section {
+  border-radius: 14px;
   margin-bottom: 2rem;
+  border-left: 4px solid #087eff;
+  box-shadow: 0 5px 18px rgba(8, 126, 255, 0.08);
+  transition: 0.25s ease;
 }
 
-.contact-info p, .social-media p {
-  margin: 0.5rem 0;
+.contact-card:hover {
+  box-shadow: 0 8px 25px rgba(8, 126, 255, 0.15);
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+.contact-card h3 {
+  color: #087eff;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ==========================
+   PARAGRAPHS
+========================== */
+.contact-card p {
+  margin: 0.6rem 0;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Highlight strong labels */
+.contact-card p strong {
+  color: #005ee0;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 1.4rem;
+    margin-top: 70px;
+  }
+
+  .contact-card {
+    padding: 1.4rem;
+  }
+
+  .contact-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .contact-header p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================================
+   SOCIAL MEDIA SECTION WITH ICONS
+================================ */
+
+.social-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.social-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  color: #087eff;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.social-links a i {
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  background: #087eff;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(8, 126, 255, 0.35);
+  transform: translateY(-3px);
 }

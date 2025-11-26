@@ -1,4 +1,3 @@
-// src/components/Testimonial/Testimonial.jsx
 import React from "react";
 import { FiShield } from "react-icons/fi";
 import "./Testimonial.css";
@@ -27,11 +26,11 @@ const testimonials = [
 function Testimonial() {
   return (
     <section className="testimonial-section">
-      <h2 className="testimonial-heading">Trusted by Industry Leaders</h2>
+      <h2>Trusted by Industry Leaders</h2>
 
       <div className="testimonial-wrapper">
         {testimonials.map((item, index) => (
-          <div key={index} className="testimonial-card">
+          <div key={index} className="testimonial-card card">
             <FiShield className="testimonial-icon" />
             <p className="testimonial-quote">“{item.quote}”</p>
             <h4 className="testimonial-author">{item.author}</h4>

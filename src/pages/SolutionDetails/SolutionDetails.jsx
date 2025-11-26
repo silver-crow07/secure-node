@@ -1,7 +1,5 @@
-// src/pages/SolutionDetails/SolutionDetails.jsx
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import "./SolutionDetails.css";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   FaShieldAlt,
   FaNetworkWired,
@@ -13,249 +11,229 @@ import {
   FaBalanceScale,
   FaSyncAlt,
   FaChalkboardTeacher,
+  FaCheckCircle,
+  FaArrowLeft,
 } from "react-icons/fa";
 
+import "./SolutionDetails.css";
+
+/* =============================================
+   🔵 SOLUTION DETAILS DATA (MUST BE AT TOP)
+============================================= */
 const solutionDetailsData = {
   "managed-security-services": {
     title: "Managed Security Services",
-    icon: <FaShieldAlt className="solution-icon" />,
-    fullDescription: `Our Managed Security Services provide 24/7 threat detection, prevention, and rapid incident response. With our Security Operations Center (SOC), your organization remains continuously monitored by certified cybersecurity experts.`,
+    icon: <FaShieldAlt className="icon" />,
+    description:
+      "Our Managed Security Services provide 24/7 monitoring, incident response and SOC support.",
     challenges: [
       "Continuous cyber threats",
-      "Limited internal security teams",
-      "Delayed incident response",
+      "Weak security visibility",
+      "Slow incident response",
     ],
     features: [
-      "24/7 Threat Monitoring",
-      "Automated Incident Response",
-      "SIEM & Log Management",
+      "24/7 Monitoring",
+      "SIEM Integration",
+      "Incident Handling",
     ],
     benefits: [
-      "Reduced downtime",
-      "Expert monitoring without overhead",
-      "Enhanced organizational resilience",
+      "Reduced breaches",
+      "Expert SOC team",
+      "Proactive response",
     ],
     caseStudy:
-      "A financial services firm reduced cyber breach attempts by 87% within 3 months of implementing our MSS platform.",
+      "A finance company reduced threats by 87% after using our MSS platform.",
   },
 
   "network-security-solutions": {
     title: "Network Security Solutions",
-    icon: <FaNetworkWired className="solution-icon" />,
-    fullDescription:
-      "Our network security architecture protects organizations from internal and external threats using next-gen firewalls, intrusion detection, and zero-trust access models.",
-    challenges: [
-      "Unauthorized access",
-      "Weak perimeter defense",
-      "Increasing network complexity",
-    ],
-    features: ["Next-Gen Firewall", "Zero Trust Access", "VPN & Encryption"],
-    benefits: [
-      "Improved network visibility",
-      "Zero trust enforcement",
-      "Strong perimeter defense",
-    ],
+    icon: <FaNetworkWired className="icon" />,
+    description:
+      "Next-gen firewalls, IDS/IPS, and zero-trust architecture for complete protection.",
+    challenges: ["Unauthorized access", "Weak perimeter", "Lateral movement"],
+    features: ["Zero Trust Model", "Firewall Protection", "Threat Blocking"],
+    benefits: ["Strong defense", "Better visibility", "Zero trust control"],
     caseStudy:
-      "We helped an IT enterprise achieve 99.99% uptime after deploying a multi-layered network security framework.",
+      "An enterprise achieved 99.99% uptime with our layered security.",
   },
 
   "cloud-security-solutions": {
     title: "Cloud Security Solutions",
-    icon: <FaCloud className="solution-icon" />,
-    fullDescription:
-      "Protect your multi-cloud environment through robust encryption, IAM policies, and compliance automation to ensure secure digital transformation.",
-    challenges: ["Cloud misconfiguration", "Unauthorized access", "Data breaches"],
-    features: ["Cloud Encryption", "IAM Integration", "Continuous Compliance"],
-    benefits: [
-      "Improved data protection",
-      "Reduced cloud misconfiguration risks",
-      "Regulatory compliance assurance",
-    ],
+    icon: <FaCloud className="icon" />,
+    description:
+      "Secure AWS, Azure, and GCP with IAM, encryption and automated auditing.",
+    challenges: ["Misconfiguration", "Access misuse", "Cloud breaches"],
+    features: ["IAM Control", "Cloud Audits", "Data Encryption"],
+    benefits: ["Fewer breaches", "Better cloud control", "Compliance ready"],
     caseStudy:
-      "A SaaS company cut data leak incidents by 90% using our cloud security suite.",
+      "A SaaS startup reduced cloud leakage by 90%.",
   },
 
   "data-protection-privacy": {
     title: "Data Protection & Privacy",
-    icon: <FaLock className="solution-icon" />,
-    fullDescription:
-      "Safeguard sensitive business data with encryption, DLP (Data Loss Prevention), and privacy compliance frameworks.",
-    challenges: ["Data breaches", "Regulatory non-compliance", "Insider threats"],
-    features: ["Data Encryption", "DLP Policies", "GDPR/ISO Compliance"],
-    benefits: [
-      "Ensures customer trust",
-      "Prevents unauthorized data exposure",
-      "Complies with major privacy laws",
-    ],
+    icon: <FaLock className="icon" />,
+    description:
+      "Ensure GDPR/ISO compliance with strong encryption and DLP monitoring.",
+    challenges: ["Data theft", "Compliance issues"],
+    features: ["DLP Monitoring", "Encryption", "Access Control"],
+    benefits: ["Trust", "Compliance", "Zero leakage"],
     caseStudy:
-      "A healthcare firm achieved 100% compliance with GDPR and HIPAA after implementing our DLP framework.",
+      "A healthcare company achieved 100% HIPAA compliance.",
   },
 
   "endpoint-application-security": {
     title: "Endpoint & Application Security",
-    icon: <FaDesktop className="solution-icon" />,
-    fullDescription:
-      "Protect end-user devices and business-critical applications from malware, ransomware, and zero-day exploits.",
-    challenges: ["Malware infections", "Unpatched vulnerabilities", "Phishing attacks"],
-    features: ["Antivirus & EDR", "Patch Management", "Runtime Application Protection"],
-    benefits: [
-      "Strengthened device-level defense",
-      "Reduced risk of data theft",
-      "Improved operational continuity",
-    ],
+    icon: <FaDesktop className="icon" />,
+    description:
+      "Protect devices and apps from malware, ransomware and exploits.",
+    challenges: ["Malware", "Ransomware", "Unpatched systems"],
+    features: ["EDR", "App Shield", "Patch Automation"],
+    benefits: ["Zero ransomware", "Protected devices"],
     caseStudy:
-      "A logistics firm blocked over 25,000 ransomware attempts using our EDR-based endpoint protection.",
+      "A logistics firm blocked 25,000 malware attempts.",
   },
 
   "identity-access-management": {
     title: "Identity & Access Management (IAM)",
-    icon: <FaUserShield className="solution-icon" />,
-    fullDescription:
-      "Ensure secure, role-based access across your organization with multi-factor authentication and centralized identity management.",
-    challenges: [
-      "Unauthorized access",
-      "Weak password policies",
-      "Lack of centralized control",
-    ],
-    features: ["MFA & SSO Integration", "Privileged Access Control", "User Lifecycle Management"],
-    benefits: [
-      "Eliminates credential-based risks",
-      "Simplifies user onboarding",
-      "Improves identity governance",
-    ],
+    icon: <FaUserShield className="icon" />,
+    description:
+      "MFA, SSO, PAM and complete identity governance for secure access.",
+    challenges: ["Password attacks", "Unauthorized access"],
+    features: ["MFA", "SSO", "Access Policies"],
+    benefits: ["98% fewer access breaches"],
     caseStudy:
-      "A financial client cut unauthorized access events by 98% after deploying our IAM framework.",
+      "A financial client reduced unauthorized logins by 98%.",
   },
 
   "threat-intelligence-analytics": {
     title: "Threat Intelligence & Analytics",
-    icon: <FaBrain className="solution-icon" />,
-    fullDescription:
-      "Leverage AI-driven analytics to detect, predict, and neutralize cyber threats in real-time using actionable threat intelligence.",
-    challenges: ["Evolving threat landscape", "Delayed response", "Limited threat visibility"],
-    features: ["AI-Powered Threat Detection", "Behavioral Analytics", "Threat Hunting"],
-    benefits: [
-      "Faster incident response",
-      "Proactive threat mitigation",
-      "Smarter SOC operations",
-    ],
+    icon: <FaBrain className="icon" />,
+    description:
+      "AI-powered analytics for early detection and real-time threat intelligence.",
+    challenges: ["Advanced threats", "Slow detection"],
+    features: ["Threat Hunting", "AI Analytics"],
+    benefits: ["93% better detection"],
     caseStudy:
-      "An e-commerce firm improved detection accuracy by 93% using our AI-driven threat intelligence module.",
+      "E-commerce client improved detection accuracy significantly.",
   },
 
   "compliance-risk-management": {
     title: "Compliance & Risk Management",
-    icon: <FaBalanceScale className="solution-icon" />,
-    fullDescription:
-      "Simplify governance with automated compliance tracking and enterprise-level risk assessments aligned with ISO, GDPR, and NIST.",
-    challenges: ["Regulatory complexity", "Manual compliance audits", "High-risk exposure"],
-    features: ["Automated Audit Tools", "Policy Mapping", "Real-time Risk Scoring"],
-    benefits: [
-      "Faster audits",
-      "Lower compliance costs",
-      "Reduced risk exposure",
-    ],
+    icon: <FaBalanceScale className="icon" />,
+    description:
+      "Automated GRC, risk scoring, and audit-ready reporting.",
+    challenges: ["Complex regulations"],
+    features: ["Audit Automation", "Risk Dashboard"],
+    benefits: ["60% faster audits"],
     caseStudy:
-      "A fintech client reduced compliance audit time by 60% using our automated compliance management suite.",
+      "Fintech client reduced audit time by 60%.",
   },
 
   "business-continuity-incident-response": {
     title: "Business Continuity & Incident Response",
-    icon: <FaSyncAlt className="solution-icon" />,
-    fullDescription:
-      "Prepare, respond, and recover effectively from any cyber incident to ensure uninterrupted business operations.",
-    challenges: ["Disaster recovery delays", "Unclear response plans", "System downtime"],
-    features: ["Incident Playbooks", "Disaster Recovery Testing", "Post-Incident Analysis"],
-    benefits: [
-      "Minimized downtime",
-      "Faster recovery",
-      "Stronger operational resilience",
-    ],
+    icon: <FaSyncAlt className="icon" />,
+    description:
+      "Prepare, respond and recover with DR playbooks and recovery systems.",
+    challenges: ["Downtime", "No IR plan"],
+    features: ["Playbooks", "DR Testing"],
+    benefits: ["4-hour recovery"],
     caseStudy:
-      "A manufacturing company restored full operations within 4 hours after a ransomware attack using our continuity plan.",
+      "A manufacturer restored operations within hours.",
   },
 
   "security-awareness-training": {
     title: "Security Awareness & Training",
-    icon: <FaChalkboardTeacher className="solution-icon" />,
-    fullDescription:
-      "Empower employees with the knowledge to identify, report, and prevent cyber threats through engaging security training.",
-    challenges: ["Human error", "Phishing susceptibility", "Low security culture"],
-    features: ["Phishing Simulations", "Interactive Training Modules", "Employee Assessments"],
-    benefits: [
-      "Reduced phishing incidents",
-      "Enhanced cyber hygiene",
-      "Improved organizational awareness",
-    ],
+    icon: <FaChalkboardTeacher className="icon" />,
+    description:
+      "Train employees to identify phishing and social engineering.",
+    challenges: ["Human errors"],
+    features: ["Simulations", "Quizzes"],
+    benefits: ["85% fewer clicks"],
     caseStudy:
-      "An IT company reduced employee phishing click rates by 85% after implementing our training program.",
+      "Corporate employees reduced phishing success by 85%.",
   },
 };
+
+/* =============================================
+   🔵 COMPONENT STARTS HERE
+============================================= */
 
 function SolutionDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const solution = solutionDetailsData[id];
 
   if (!solution)
     return (
-      <div className="solution-not-found">
+      <div className="solution-details-not-found">
         <h2>Solution Not Found</h2>
-        <button onClick={() => navigate("/solutions")}>Back to Solutions</button>
+        <button onClick={() => navigate("/solutions")}>Go Back</button>
       </div>
     );
 
   return (
-    <div className="solution-details-container">
-      <div className="solution-header">
-        {solution.icon}
-        <h1>{solution.title}</h1>
-      </div>
+    <div className="solution-details-page">
+      <div className="solution-details-container">
+        {/* HEADER */}
+        <h2 className="solution-details-title">{solution.title}</h2>
+        <p className="solution-details-description">
+          {solution.description}
+        </p>
 
-      <p className="solution-description">{solution.fullDescription}</p>
+        {/* SECTIONS */}
+        <section className="solution-details-section">
+          <h3>Challenges</h3>
+          <ul>
+            {solution.challenges.map((item, i) => (
+              <li key={i}>
+                <FaCheckCircle className="list-icon" /> {item}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="solution-section">
-        <h3>Challenges</h3>
-        <ul>
-          {solution.challenges.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="solution-details-section">
+          <h3>Key Features</h3>
+          <ul>
+            {solution.features.map((item, i) => (
+              <li key={i}>
+                <FaCheckCircle className="list-icon" /> {item}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="solution-section">
-        <h3>Key Features</h3>
-        <ul>
-          {solution.features.map((feature, i) => (
-            <li key={i}>{feature}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="solution-details-section">
+          <h3>Benefits</h3>
+          <ul>
+            {solution.benefits.map((item, i) => (
+              <li key={i}>
+                <FaCheckCircle className="list-icon" /> {item}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="solution-section">
-        <h3>Benefits</h3>
-        <ul>
-          {solution.benefits.map((benefit, i) => (
-            <li key={i}>{benefit}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="solution-details-section">
+          <h3>Case Study</h3>
+          <p>{solution.caseStudy}</p>
+        </section>
 
-      <section className="solution-section">
-        <h3>Case Study</h3>
-        <p>{solution.caseStudy}</p>
-      </section>
+        {/* BUTTONS */}
+        <div className="solution-details-buttons">
+          <Link to="/solutions" className="solution-details-back-btn">
+            <FaArrowLeft /> Back to Solutions
+          </Link>
 
-      <div className="solution-actions">
-        <button onClick={() => navigate("/solutions")} className="back-button">
-          ← Back to Solutions
-        </button>
-        <a href="/contact" className="cta-button">
-          Talk to Our Experts
-        </a>
+          <a href="/contact" className="solution-details-cta-btn">
+            Talk to Our Experts
+          </a>
+        </div>
       </div>
     </div>
   );
 }
 
 export default SolutionDetails;
+

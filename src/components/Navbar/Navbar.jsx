@@ -1,51 +1,53 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Securenlogo.png";
 
-function Navbar() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-    document.body.style.overflow = !isOpen ? "hidden" : "auto"; // Prevent scroll when menu open
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-    document.body.style.overflow = "auto";
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
-      <div className="nav-left">
-        <img src={logo} alt="SecureNode Logo" className="nav-logo" />
-        <span className="logo-text">SecureNode</span>
+      
+      {/* ===== LOGO SECTION ===== */}
+      <div className="logo-container">
+        <img src={logo} alt="Logo" className="logo-img" />
       </div>
 
-      {/* Transparent overlay when menu opens */}
-      <div className={`overlay ${isOpen ? "show" : ""}`} onClick={closeMenu}></div>
+      {/* ===== DESKTOP NAVIGATION ===== */}
+      <ul className="navList desktopNav">
+        <li><NavLink to="/" onClick={closeMenu} className="navLink">Home</NavLink></li>
+        <li><NavLink to="/about" onClick={closeMenu} className="navLink">About Us</NavLink></li>
+        <li><NavLink to="/services" onClick={closeMenu} className="navLink">Services</NavLink></li>
+        <li><NavLink to="/solutions" onClick={closeMenu} className="navLink">Solutions</NavLink></li>
+        <li><NavLink to="/industries" onClick={closeMenu} className="navLink">Industries</NavLink></li>
+        <li><NavLink to="/blog" onClick={closeMenu} className="navLink">Blog</NavLink></li>
+        <li><NavLink to="/careers" onClick={closeMenu} className="navLink">Careers</NavLink></li>
+        <li><NavLink to="/contact" onClick={closeMenu} className="navLink">Contact</NavLink></li>
+      </ul>
 
-      <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <Link to="/" onClick={closeMenu}>Home</Link>
-        <Link to="/about" onClick={closeMenu}>About Us</Link>
-        <Link to="/services" onClick={closeMenu}>Services</Link>
-        <Link to="/solutions" onClick={closeMenu}>Solutions</Link>
-        <Link to="/industries" onClick={closeMenu}>Industries</Link>
-        <Link to="/blog" onClick={closeMenu}>Blog</Link>
-        <Link to="/careers" onClick={closeMenu}>Careers</Link>
+      {/* ===== HAMBURGER MENU ===== */}
+      <div className="hamburger" onClick={toggleMenu}>☰</div>
+
+      {/* ===== MOBILE MENU ===== */}
+      <div className={`mobileMenu ${isOpen ? "open" : ""}`}>
+        <button className="closeBtn" onClick={toggleMenu}>×</button>
+
+        <ul className="mobileNavList">
+          <li><NavLink to="/" onClick={closeMenu} className="navLink">Home</NavLink></li>
+          <li><NavLink to="/about" onClick={closeMenu} className="navLink">About Us</NavLink></li>
+          <li><NavLink to="/services" onClick={closeMenu} className="navLink">Services</NavLink></li>
+          <li><NavLink to="/solutions" onClick={closeMenu} className="navLink">Solutions</NavLink></li>
+          <li><NavLink to="/industries" onClick={closeMenu} className="navLink">Industries</NavLink></li>
+          <li><NavLink to="/blog" onClick={closeMenu} className="navLink">Blog</NavLink></li>
+          <li><NavLink to="/careers" onClick={closeMenu} className="navLink">Careers</NavLink></li>
+          <li><NavLink to="/contact" onClick={closeMenu} className="navLink">Contact</NavLink></li>
+        </ul>
       </div>
 
-      <div
-        className={`hamburger ${isOpen ? "active" : ""}`}
-        onClick={handleToggle}
-      >
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
     </nav>
   );
 }
-
-export default Navbar;

@@ -1,0 +1,46 @@
+:root {
+   /* ===== COLORS ===== */
+  --primary-light-blue: #087EFF;
+  --primary-dark-blue: #073792;
+  --primary-light-blue-transparent: #6FB4FF0D; 
+  --background-color: #FAFAFA;
+  --text-color: #000000;
+  --text-secondary: #333333;
+
+  /* ===== FONT FAMILY ===== */
+  --font-family-main: 'Inter', sans-serif;
+
+  /* ===== FONT SIZES ===== */
+  --font-size-heading-main: 50px;
+  --font-size-subheading: 30px;
+  --font-size-paragraph: 20px;
+  --font-size-button: 18px;
+  --font-size-footer-heading: 20px;
+  --font-size-footer-text: 14px;
+
+  /* ===== FONT WEIGHTS ===== */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* ===== LINE HEIGHTS ===== */
+  --line-height-heading: 119%;
+  --line-height-subheading: 140%;
+  --line-height-paragraph: 150%;
+  --line-height-footer-heading: 30px;
+  --line-height-footer-text: 21px;
+
+  /* ===== CARD DIMENSIONS ===== */
+  --card-width: 374px;
+  --card-height: 579px;
+  --card-gap: 14.53px;
+  --card-padding-top: 15px;
+  --card-padding-right: 7.26px;
+  --card-padding-bottom: 21.79px;
+  --card-padding-left: 7.26px;
+  --card-radius: 14px;
+
+  /* ===== LAYOUT ===== */
+  --page-padding: 90px;
+  --container-max-width: 1200px;
+}

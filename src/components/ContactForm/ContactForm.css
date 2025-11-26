@@ -1,39 +1,48 @@
-/* src/components/ContactForm/ContactForm.css */
+/* ================================
+   CONTACT FORM (LIGHT THEME)
+================================ */
 
 .contact-section {
-  background: #050b14;
+  background: #f8fafc;
   padding: 80px 0;
   text-align: center;
-  color: #fff;
+  color: #0f172a;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-title {
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 10px;
+  color: #0f172a;
 }
 
 .contact-title span {
-  color: #00faff;
-  text-shadow: 0 0 18px #00faff;
+  color: #087eff;
 }
 
 .contact-subtitle {
-  color: #bcd3e8;
+  color: #475569;
   margin-bottom: 40px;
+  font-size: 1.1rem;
 }
 
-/* FORM CONTAINER */
+/* FORM WRAPPER */
 .contact-form {
   width: 90%;
   max-width: 650px;
   margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* INPUT FIELDS */
+/* INPUT GROUP */
 .input-group {
   position: relative;
 }
@@ -43,19 +52,20 @@
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
-  color: #00faff;
+  color: #087eff;
   font-size: 1.1rem;
 }
 
+/* INPUT + TEXTAREA */
 input,
 textarea {
   width: 100%;
-  background: transparent;
-  border: 2px solid #00faff;
-  color: #ffffff;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  color: #0f172a;
   padding: 14px 48px;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: 0.3s;
   outline: none;
 }
@@ -66,29 +76,30 @@ textarea {
   padding-top: 18px;
 }
 
-/* GLOW ON FOCUS */
+/* FOCUS EFFECT */
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 20px #00faff;
+  border-color: #087eff;
+  box-shadow: 0 0 0 4px rgba(8, 126, 255, 0.2);
 }
 
 /* SUBMIT BUTTON */
 .submit-btn {
   padding: 14px;
   border: none;
-  background: #00faff;
-  color: #000;
-  font-weight: bold;
+  background: #087eff;
+  color: #fff;
+  font-weight: 600;
   font-size: 1.1rem;
-  text-transform: uppercase;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 20px #00faff;
+  transition: 0.3s ease;
 }
 
 .submit-btn:hover {
-  transform: translateY(-5px);
+  background: #006fde;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(8, 126, 255, 0.28);
 }
 
 /* RESPONSIVE */
@@ -96,4 +107,14 @@ textarea:focus {
   .contact-title {
     font-size: 2.2rem;
   }
+
+  .contact-form {
+    padding: 28px;
+  }
+
+  input,
+  textarea {
+    padding: 12px 45px;
+  }
 }
+

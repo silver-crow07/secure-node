@@ -1,6 +1,5 @@
 // src/pages/Solutions/Solutions.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import SolutionCard from "../../components/SolutionCard/SolutionCard";
 import "./Solutions.css";
 
@@ -79,32 +78,24 @@ const solutionsData = [
 ];
 
 function Solutions() {
-  const navigate = useNavigate();
-
-  const handleCardClick = (solution) => {
-    navigate(`/solutions/${solution.id}`, { state: { solution } });
-  };
-
   return (
-    <div className="solutions-page">
-      <h2 className="solutions-heading">Comprehensive Cybersecurity Solutions</h2>
-      <p className="solutions-subtext">
-        Explore our wide range of cybersecurity solutions designed to protect your organization from evolving digital threats.
+    <section className="solutions-wrapper">
+      <h1 className="solutions-title">
+        Our <span>Solutions</span>
+      </h1>
+
+      <p className="solutions-subtitle">
+        SecureNode provides advanced cybersecurity solutions to safeguard modern enterprises.
       </p>
 
       <div className="solutions-grid">
-        {solutionsData.map((solution, index) => (
-          <div
-            key={index}
-            className="solution-card-wrapper"
-            onClick={() => handleCardClick(solution)}
-          >
-            <SolutionCard {...solution} />
-          </div>
+        {solutionsData.map((solution) => (
+          <SolutionCard key={solution.id} {...solution} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
 export default Solutions;
+

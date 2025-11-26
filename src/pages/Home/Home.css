@@ -1,90 +1,571 @@
-/* src/pages/Home/Home.css */
-
-.home-page {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
+.home-container {
+  width: 100%;
+  background-color: var(--background-color);
   overflow-x: hidden;
 }
 
-/* Stats */
-.trust-stats {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
+/* Recognition Banner*/
+.recognition-banner {
   text-align: center;
-}
-.stats-box {
-  background: #0a0f2d;
-  padding: 2rem 3rem;
-  border-radius: 14px;
-  color: white;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-}
-.stats-box h3 {
-  font-size: 2rem;
+  padding: 60px 20px;
+  margin-top: -30;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border-radius: 0 0 20px 20px;
+  
 }
 
-/* Services */
-.services-snapshot {
-  text-align: center;
+.banner-subheading {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+  padding-top: 30px;
+  
 }
-.services-cards {
+
+/* Stats Container */
+.banner-stats {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
+}
+
+/* Each Stat Box */
+.stat-box {
+  background: white;
+  padding: 22px 30px;
+  width: 200px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  border-top: 4px solid #3b82f6;
+}
+
+/* Hover effect */
+.stat-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Stat Number */
+.stat-box h3 {
+  color: #2563eb;
+  font-size: 38px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+/* Stat Label */
+.stat-box p {
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+/* ================================
+   📱 Responsive
+=================================*/
+@media (max-width: 768px) {
+  .banner-subheading {
+    font-size: 26px;
+  }
+
+  .stat-box {
+    width: 160px;
+    padding: 18px 22px;
+  }
+
+  .stat-box h3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-subheading {
+    font-size: 22px;
+  }
+
+  .stat-box {
+    width: 140px;
+    padding: 16px 20px;
+  }
+
+  .stat-box h3 {
+    font-size: 28px;
+  }
+}
+
+/* =============================== */
+/*         ABOUT SECTION           */
+/* =============================== */
+
+.about-preview {
+  padding: 80px 40px;
+}
+
+/* ⭐ Heading Center & Full Width */
+.about-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ⭐ Content Row (Text + Image) */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* ⭐ Left Text */
+.about-text {
+  flex: 1;
+}
+
+/* ⭐ Paragraph */
+.about-text p {
+  font-size: 18px;
+  color: #5D5D5D;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* ⭐ Button Center */
+.btn-wrapper {
+  display: flex;
   justify-content: center;
 }
 
-/* Industries */
-.industries-section {
+.btn-about {
+  background-color: #087EFF;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-about:hover {
+  background-color: #005ecc;
+}
+
+/* ⭐ Right Image */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 400px;
+  max-height:240px ;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ⭐ Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 320px;
+  }
+}
+
+/* ===== Card Section Wrapper ===== */
+.scroll-section {
+  margin-top: 70px;
+  text-align: center;
+}
+
+/* ===== Heading Center ===== */
+.section-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.section-subheading {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ===== Cards Container ===== */
+.scroll-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Desktop */
+  gap: 25px;
+  padding: 0 40px;
+}
+
+/* ===== Card Design (Light Theme) ===== */
+.scroll-card {
+  background: #ffffff;
+  padding: 25px;
+  height: 280px;               /* ⭐ SAME height */
+  border-radius: 18px;
+  border-top: 4px solid #087EFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  justify-content: center;     /* ⭐ Perfect alignment */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
 }
-.industry-logos {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.scroll-card:hover {
+  transform: translateY(-4px);
 }
-.industry-logos img {
-  height: 60px;
+
+.scroll-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.scroll-card p {
+  color: #444;
   opacity: 0.8;
-  transition: 0.3s;
-}
-.industry-logos img:hover {
-  opacity: 1;
-  transform: scale(1.1);
+  font-size: 15px;
 }
 
-/* Testimonials */
-.testimonials-section {
+/* ===== View More Button ===== */
+.view-more-wrapper {
+  margin-top: 25px;
   text-align: center;
-}
-.testimonials-container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-/* CTA */
-.cta-section {
-  text-align: center;
-}
-.cta-button {
-  display: inline-block;
-  padding: 1rem 2.4rem;
-  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
-  color: white;
-  border-radius: 50px;
-  text-decoration: none;
+.view-more-btn {
+  background: #087EFF;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
   font-weight: 600;
-  box-shadow: 0px 6px 18px rgba(29, 78, 216, 0.5);
   transition: 0.3s;
 }
-.cta-button:hover {
-  transform: translateY(-3px);
+
+.view-more-btn:hover {
+  background: #005ecc;
+}
+
+/* ===========================
+      RESPONSIVE
+=========================== */
+
+/* 🔹 Tablet (2 cards) */
+@media (max-width: 1024px) {
+  .scroll-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🔹 Mobile (1 card) */
+@media (max-width: 768px) {
+  .scroll-cards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
+  }
+}
+
+/* ===== ICON  ===== */
+.icon-box {
+  margin-bottom: 12px;
+  color: #087EFF;       /* theme color */
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #087EFF;
+  color: #087EFF;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.read-more-btn:hover {
+  background: #087EFF;
+  color: white;
+}
+
+/* ===========================
+   ⭐ Modern Blog Section
+=========================== */
+
+.modern-blog-section {
+  padding: 80px 40px;
+}
+
+.modern-blog-heading {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modern-blog-subheading {
+  text-align: center;
+  font-size: 18px;
+  color: #5D5D5D;
+  margin-bottom: 40px;
+}
+
+/* ⭐ Blog Grid */
+.modern-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ⭐ Blog Cards */
+.modern-blog-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.modern-blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* ⭐ Image */
+.blog-img-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.blog-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.35s ease;
+}
+
+.modern-blog-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ⭐ Heading */
+.modern-blog-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ⭐ Description */
+.modern-blog-card p {
+  color: #6b7280;
+  padding: 0 15px;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ⭐ Read More button */
+.blog-readmore {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.blog-readmore:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ⭐ Section Button */
+.blog-btn-wrapper {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.blog-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.blog-btn:hover {
+  background: #1e40af;
+}
+
+/* ⭐ Responsive: 4 → 2 → 1 */
+@media (max-width: 1024px) {
+  .modern-blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .modern-blog-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ================================ */
+/* ⭐ Infinite Testimonial Carousel */
+/* ================================ */
+
+.infinite-testimonial-section {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border-radius: 20px;
+  margin-top: 70px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.modern-testimonial-heading {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.testimonial-carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🟦 Desktop Carousel */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.testimonial-card {
+  flex: 0 0 33.33%;
+  padding: 25px;
+  background: white;
+  margin: 0 10px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border-top: 4px solid #3b82f6;
+  text-align: center;
+}
+
+.t-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.t-text {
+  color: #444;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.t-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.t-role {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Arrow Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f172a;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0.85;
+  font-size: 28px;
+  z-index: 20;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover { opacity: 1; }
+
+.carousel-btn.left { left: 10px; }
+.carousel-btn.right { right: 10px; }
+
+
+/* ======================= */
+/* ⭐ Mobile Scroll Mode   */
+/* ======================= */
+@media (max-width: 768px) {
+
+  .testimonial-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .testimonial-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    min-width: 80%;
+    max-width: 80%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .carousel-btn {
+    display: none; /* hide arrows in mobile */
+  }
 }
