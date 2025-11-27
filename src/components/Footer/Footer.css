@@ -3,15 +3,17 @@
 ================================ */
 .sn-footer {
   width: 100%;
-  background: #0a57ff;        /* BLUE BACKGROUND */
+   background: #0a57ff;      /* BLUE BACKGROUND */
   color: #ffffff;             /* WHITE TEXT */
   padding: 60px 20px 35px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 100px;
 }
 
 .sn-footer-container {
+   
   max-width: 1300px;
   margin: auto;
   display: grid;

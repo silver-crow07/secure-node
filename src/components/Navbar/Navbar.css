@@ -16,6 +16,7 @@
 .logo-container {
   display: flex;
   align-items: center;
+  padding-right: 20%;
 }
 
 .logo-img {
@@ -27,8 +28,10 @@
 /* ===== NAV LINKS (Desktop) ===== */
 .desktopNav {
   display: flex;
-  gap: 25px;
+  text-align: center;
   list-style: none;
+  gap:25px
+
 }
 
 .navLink {
@@ -38,6 +41,19 @@
   padding-bottom: 4px;
   position: relative;
   transition: color 0.3s ease;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navList {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin-left: 40px;
 }
 
 /* Hover underline */
@@ -114,7 +130,7 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .desktopNav {
     display: none;
   }
@@ -125,6 +141,10 @@
 
   .logo-img {
     width: 120px;
+  }
+
+  .nav-center {
+    display: none;
   }
 }
 

@@ -6,6 +6,7 @@ import logo from "../../assets/Securenlogo.png";
 
 export default function Footer() {
   return (
+    
     <footer className="sn-footer">
       <div className="sn-footer-container">
 
@@ -66,5 +67,6 @@ export default function Footer() {
         © 2025 SecureNode — All Rights Reserved.
       </div>
     </footer>
+    
   );
 }

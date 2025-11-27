@@ -75,6 +75,85 @@ const industryDetailsData = {
     caseStudy:
       "A university network prevented 12 major phishing incidents through SecureNode’s awareness training and secure LMS integration.",
   },
+  government: {
+    title: "Government",
+    icon: "🏛️",
+    overview:
+      "SecureNode safeguards critical government infrastructure, confidential citizen data, and national digital assets with high-level cybersecurity frameworks.",
+    challenges: [
+      "Increasing nation-state cyber attacks",
+      "Protection of confidential citizen records",
+      "Legacy systems vulnerable to exploits",
+      "High-value targets for data theft & espionage"
+    ],
+    approach: [
+      "Critical Infrastructure Protection (CIP)",
+      "AI-driven threat intelligence",
+      "Secure network segmentation",
+      "Government-grade encryption & monitoring"
+    ],
+    benefits: [
+      "Stronger national cyber defense",
+      "Real-time threat detection & response",
+      "Protection of citizen-sensitive records",
+      "Compliance with global security standards"
+    ],
+    caseStudy:
+      "A central government agency improved their cybersecurity posture by 75% after implementing SecureNode’s real-time threat intelligence and SOC monitoring solutions."
+  },
+  ecommerce: {
+    title: "E-commerce",
+    icon: "🛒",
+    overview:
+      "SecureNode protects online businesses from payment fraud, data breaches, and malicious attacks while ensuring a seamless shopping experience.",
+    challenges: [
+      "Payment gateway fraud & fake orders",
+      "Customer data leaks & identity theft",
+      "Bot attacks & cart manipulation",
+      "DDoS attacks impacting website uptime"
+    ],
+    approach: [
+      "End-to-end payment encryption",
+      "Bot & DDoS mitigation technology",
+      "Secure checkout process hardening",
+      "Continuous vulnerability scanning"
+    ],
+    benefits: [
+      "Fraud-free online transactions",
+      "Higher customer trust & retention",
+      "99.9% platform uptime",
+      "Fully secure shopping experience"
+    ],
+    caseStudy:
+      "A global e-commerce company reduced fraudulent transactions by 88% after adopting SecureNode’s adaptive fraud protection and bot prevention systems."
+  },
+  it: {
+    title: "IT & Software",
+    icon: "💻",
+    overview:
+      "SecureNode helps IT and software companies safeguard their cloud infrastructure, APIs, development pipelines, and digital products.",
+    challenges: [
+      "API vulnerabilities & exposed endpoints",
+      "Cloud misconfigurations leading to data leaks",
+      "Source code theft & insider threats",
+      "Weak application security controls"
+    ],
+    approach: [
+      "Advanced Application Security (DAST & SAST)",
+      "Cloud posture management (CSPM)",
+      "Identity & Access Management (IAM)",
+      "Secure DevOps (DevSecOps) integration"
+    ],
+    benefits: [
+      "Secure CI/CD pipelines",
+      "Reduced vulnerabilities in applications",
+      "Stronger development lifecycle security",
+      "Protection of intellectual property"
+    ],
+    caseStudy:
+      "A fast-growing SaaS company prevented API abuse and reduced security vulnerabilities by 94% after integrating SecureNode's DevSecOps and cloud governance solutions."
+  },
+
 };
 
 function IndustryDetails() {

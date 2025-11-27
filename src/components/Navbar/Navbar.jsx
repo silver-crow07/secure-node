@@ -11,23 +11,26 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      
+
       {/* ===== LOGO SECTION ===== */}
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo-img" />
       </div>
 
       {/* ===== DESKTOP NAVIGATION ===== */}
-      <ul className="navList desktopNav">
-        <li><NavLink to="/" onClick={closeMenu} className="navLink">Home</NavLink></li>
-        <li><NavLink to="/about" onClick={closeMenu} className="navLink">About Us</NavLink></li>
-        <li><NavLink to="/services" onClick={closeMenu} className="navLink">Services</NavLink></li>
-        <li><NavLink to="/solutions" onClick={closeMenu} className="navLink">Solutions</NavLink></li>
-        <li><NavLink to="/industries" onClick={closeMenu} className="navLink">Industries</NavLink></li>
-        <li><NavLink to="/blog" onClick={closeMenu} className="navLink">Blog</NavLink></li>
-        <li><NavLink to="/careers" onClick={closeMenu} className="navLink">Careers</NavLink></li>
-        <li><NavLink to="/contact" onClick={closeMenu} className="navLink">Contact</NavLink></li>
-      </ul>
+      <div className="nav-center">
+        <ul className="navList desktopNav">
+
+          <li><NavLink to="/" onClick={closeMenu} className="navLink">Home</NavLink></li>
+          <li><NavLink to="/about" onClick={closeMenu} className="navLink">About </NavLink></li>
+          <li><NavLink to="/services" onClick={closeMenu} className="navLink">Services</NavLink></li>
+          <li><NavLink to="/solutions" onClick={closeMenu} className="navLink">Solutions</NavLink></li>
+          <li><NavLink to="/industries" onClick={closeMenu} className="navLink">Industries</NavLink></li>
+          <li><NavLink to="/blog" onClick={closeMenu} className="navLink">Blog</NavLink></li>
+          <li><NavLink to="/careers" onClick={closeMenu} className="navLink">Careers</NavLink></li>
+          <li><NavLink to="/contact" onClick={closeMenu} className="navLink">Contact</NavLink></li>
+        </ul> 
+      </div>
 
       {/* ===== HAMBURGER MENU ===== */}
       <div className="hamburger" onClick={toggleMenu}>☰</div>
