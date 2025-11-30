@@ -158,6 +158,10 @@
     height: 280px;
   }
 
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .hero-title {
     font-size: 42px;
   }
