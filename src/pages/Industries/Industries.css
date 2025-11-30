@@ -1,28 +1,33 @@
-/* Main wrapper */
+/* =============================================
+   SECURENODE — INDUSTRIES PAGE (NEON CYBER THEME)
+============================================= */
+
+/* Page Wrapper */
 .industries-wrapper {
-  padding: 20px 7% 70px;
-  background: #f8fafc;
+  padding: 120px 7% 70px;
+  background: var(--bg-main);
   text-align: center;
   font-family: "Poppins", sans-serif;
+  color: var(--text-light);
 }
 
-/* Title */
+/* Titles */
 .industries-title {
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--neon);
   margin-bottom: 10px;
+  text-shadow: 0 0 20px var(--neon-glow);
 }
 
 .industries-title span {
-  color: #087eff;
+  color: var(--neon);
 }
 
-/* Subtitle */
 .industries-subtitle {
   max-width: 780px;
   margin: 0 auto 60px;
-  color: #475569;
+  color: var(--text-muted);
   font-size: 17px;
   line-height: 1.6;
 }
@@ -34,57 +39,63 @@
   gap: 32px;
 }
 
-/* Card */
+/* Industry Card */
 .industry-card {
-  background: #fff;
+  background: rgba(10, 15, 20, 0.7);
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid #cce5ff;
+  border: 1px solid var(--neon);
+  backdrop-filter: blur(5px);
 
   text-align: center;
-  transition: 0.3s ease;
+  transition: 0.35s ease;
+  box-shadow: 0 0 20px rgba(8, 232, 255, 0.15);
   position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 .industry-card:hover {
-  transform: translateY(-6px);
-  border-color: #087eff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  border-color: var(--neon);
+  box-shadow: 0 0 32px rgba(8, 232, 255, 0.35);
 }
 
-/* Image */
+/* Image Box */
 .industry-img {
   width: 100%;
   height: 200px;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(8, 232, 255, 0.25);
 }
 
 .industry-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.3s ease;
+  transition: 0.35s ease;
+  filter: brightness(0.88);
 }
 
 .industry-card:hover img {
-  transform: scale(1.07);
+  transform: scale(1.08);
+  filter: brightness(1);
 }
 
-/* Text */
+/* Card Text */
 .industry-card h3 {
-  font-size: 1.3rem;
-  color: #087eff;
-  margin-bottom: 8px;
+  font-size: 1.35rem;
+  color: var(--neon);
   font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 0 15px var(--neon-glow);
 }
 
 .industry-card p {
-  color: #444;
-  min-height: 55px;
-  margin-bottom: 50px;
+  color: var(--text-light);
+  min-height: 60px;
+  margin-bottom: 55px;
   font-size: 15px;
 }
 
@@ -94,19 +105,21 @@
   bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
-  background: #087eff;
-  color: #fff;
+  background: var(--neon);
+  color: black;
   border: none;
   padding: 10px 22px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease;
+  box-shadow: 0 0 20px var(--neon-glow);
 }
 
 .industry-btn:hover {
-  background: #005ecc;
+  background: var(--neon-hover);
   transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 0 28px var(--neon-glow);
 }
 
 /* RESPONSIVE */
@@ -116,13 +129,13 @@
   }
 
   .industries-title {
-    font-size: 32px;
+    font-size: 34px;
   }
 }
 
 @media (max-width: 768px) {
   .industries-wrapper {
-    padding: 100px 5% 50px;
+    padding: 100px 5% 60px;
   }
 
   .industries-grid {
@@ -130,13 +143,13 @@
   }
 
   .industries-title {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .industries-title {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .industries-subtitle {

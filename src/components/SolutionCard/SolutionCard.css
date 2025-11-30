@@ -1,27 +1,41 @@
-.solutionCard {
-  background: #ffffff;
-  border-radius: 16px;
-  border-top: 4px solid #087EFF;
+/* ============================================================
+    SECURENODE — SOLUTION CARD (NEON CYBER DARK THEME)
+============================================================ */
 
+/* Main Card */
+.solutionCard {
+  background: #0b0f16;                 /* Cyber dark */
+  border-radius: 16px;
+  border: 1px solid var(--neon);       /* Neon border */
   padding: 22px;
   text-align: center;
 
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 18px rgba(14, 228, 255, 0.08);
   transition: 0.35s ease;
-  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Hover Effect */
 .solutionCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 28px var(--neon-glow);
 }
 
-/* Image Box */
+/* =============================
+        IMAGE BOX
+============================= */
 .solutionCard-img {
   width: 100%;
   height: 200px;
   overflow: hidden;
   border-radius: 12px;
+
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 12px rgba(14, 228, 255, 0.12);
+
   margin-bottom: 18px;
 }
 
@@ -36,41 +50,56 @@
   transform: scale(1.08);
 }
 
-/* Title */
-.solutionCard h3 {
+/* =============================
+        TITLE
+============================= */
+.solutionCard h3,
+.solutionCard-title {
   font-size: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--neon);
   margin-bottom: 10px;
+  text-shadow: 0 0 12px var(--neon-glow);
 }
 
-/* Description */
-.solutionCard p {
-  color: #475569;
+/* =============================
+        DESCRIPTION
+============================= */
+.solutionCard p,
+.solutionCard-description {
+  color: var(--text-light);
+  opacity: 0.85;
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* BUTTON MATCHES THEME */
+/* =============================
+        BUTTON
+============================= */
 .solutionCard-btn {
-  background: #087EFF;
-  color: #fff;
+  background: var(--neon);
+  color: black;
+
   border: none;
   padding: 10px 22px;
   font-size: 15px;
   font-weight: 600;
   border-radius: 8px;
+
   cursor: pointer;
   transition: 0.25s ease;
 }
 
 .solutionCard-btn:hover {
-  background: #005ecc;
+  background: var(--neon-soft);
+  box-shadow: 0 0 18px var(--neon-glow);
   transform: translateY(-2px);
 }
 
-/* Responsive */
+/* =============================
+        RESPONSIVE
+============================= */
 @media (max-width: 768px) {
   .solutionCard-img {
     height: 160px;

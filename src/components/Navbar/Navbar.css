@@ -1,135 +1,168 @@
-/* ===== BASE NAVBAR ===== */
+/* ============================================================
+        SECURENODE NAVBAR — NEON CYBER DARK THEME
+============================================================ */
+
+/* MAIN NAVBAR */
 .navbar {
   width: 100%;
-  background: white;
+  background: var(--bg-main);
   padding: 12px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
+
+  border-bottom: 1px solid var(--neon);
+  box-shadow: 0 0 15px rgba(14, 228, 255, 0.18);
 }
 
-/* ===== LOGO ===== */
+/* ==========================
+        LOGO
+========================== */
 .logo-container {
   display: flex;
   align-items: center;
-  padding-right: 20%;
 }
 
 .logo-img {
   width: 140px;
   height: auto;
-  object-fit: contain;
+  filter: drop-shadow(0 0 10px var(--neon-glow));
 }
 
-/* ===== NAV LINKS (Desktop) ===== */
+/* ==========================
+        DESKTOP NAV LINKS
+========================== */
 .desktopNav {
   display: flex;
-  text-align: center;
+  align-items: center;
+  gap: 25px;
   list-style: none;
-  gap:25px
-
 }
 
 .navLink {
   text-decoration: none;
-  color: #0f0101;
+  color: var(--text-light);
   font-weight: 500;
+  font-size: 15px;
   padding-bottom: 4px;
   position: relative;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
 }
 
+/* Hover Neon glow */
+.navLink:hover {
+  color: var(--neon);
+  text-shadow: 0 0 8px var(--neon-glow);
+}
+
+/* Active Page */
+.navLink.active {
+  color: var(--neon);
+  font-weight: 600;
+}
+
+.navLink.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--neon);
+  border-radius: 4px;
+  box-shadow: 0 0 12px var(--neon-glow);
+}
+
+/* Center alignment fix */
 .nav-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.navList {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin-left: 40px;
-}
-
-/* Hover underline */
-.navLink:hover {
-  color: #38bdf8;
-}
-
-.active {
-  color: #38bdf8;
-  font-weight: 600;
-}
-
-.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  border-radius: 2px;
-}
-
-/* ===== HAMBURGER ===== */
+/* ==========================
+       HAMBURGER
+========================== */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #150101;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
+  transition: 0.3s ease;
 }
 
-/* ===== MOBILE MENU ===== */
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================
+       MOBILE MENU
+========================== */
 .mobileMenu {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 250px;
+
+  width: 260px;
   height: 100%;
-  background: #0f172a;
-  padding: 20px;
+
+  background: #081018;
+  border-right: 1px solid var(--neon);
+
+  padding: 25px 20px;
+
   display: flex;
   flex-direction: column;
+
   transition: left 0.3s ease;
   z-index: 2000;
+
+  box-shadow: 0 0 20px rgba(14, 228, 255, 0.2);
 }
 
 .mobileMenu.open {
   left: 0;
 }
 
+/* Close Button */
 .closeBtn {
   align-self: flex-end;
   font-size: 2rem;
-  color: white;
+  color: var(--neon);
   background: none;
   border: none;
   cursor: pointer;
+
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
 .mobileNavList {
-  margin-top: 30px;
+  margin-top: 40px;
   list-style: none;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .mobileNavList .navLink {
-  color: white;
+  color: var(--text-light);
   font-size: 1.1rem;
 }
 
 .mobileNavList .navLink:hover {
-  color: #38bdf8;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ==========================
+       RESPONSIVE
+========================== */
 @media (max-width: 992px) {
   .desktopNav {
     display: none;

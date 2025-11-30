@@ -1,19 +1,23 @@
-/* ================================
-     SECURENODE FOOTER (BLUE THEME)
-================================ */
+/* ============================================================
+        SECURENODE FOOTER — NEON CYBER DARK THEME
+============================================================ */
+
+/* ============================
+      FOOTER MAIN WRAPPER
+============================ */
 .sn-footer {
   width: 100%;
-   background: #0a57ff;      /* BLUE BACKGROUND */
-  color: #ffffff;             /* WHITE TEXT */
-  padding: 60px 20px 35px;
+  background: var(--bg-main);
+  color: var(--text-light);
+  padding: 70px 20px 40px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--neon);
+  box-shadow: 0 0 25px rgba(14, 228, 255, 0.15);
   margin-top: 100px;
 }
 
+/* GRID LAYOUT */
 .sn-footer-container {
-   
   max-width: 1300px;
   margin: auto;
   display: grid;
@@ -21,57 +25,62 @@
   gap: 40px;
 }
 
-/* ================================
-     BRAND SECTION
-================================ */
+/* ============================
+      BRAND SECTION
+============================ */
 .sn-footer-brand {
   max-width: 320px;
 }
 
+/* Neon Logo Glow */
 .sn-footer-logo {
   width: 140px;
-  background: white;
-  padding: 6px 10px;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(255,255,255,0.25);
+  padding: 0;
+  background: transparent;
+  filter: drop-shadow(0 0 10px var(--neon-glow));
   margin-bottom: 15px;
 }
 
 .sn-footer-desc {
   font-size: 15px;
   line-height: 1.6;
-  color: #f1f5f9;      /* Soft white */
+  color: var(--text-muted);
   margin-bottom: 20px;
 }
 
-/* ================================
-     SOCIAL ICONS
-================================ */
+/* ============================
+      SOCIAL ICONS
+============================ */
 .sn-footer-socials {
   display: flex;
-  gap: 15px;
+  gap: 18px;
   margin-top: 10px;
 }
 
 .sn-footer-socials a {
-  color: #ffffff;
-  font-size: 23px;
+  font-size: 25px;
+  color: var(--neon);
   transition: 0.3s ease;
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
 .sn-footer-socials a:hover {
-  color: #dbeafe;              /* Light blue hover */
-  transform: scale(1.12);
+  transform: scale(1.15);
+  color: var(--neon-soft);
+  text-shadow: 0 0 14px var(--neon-glow);
 }
 
-/* ================================
-     FOOTER COLUMNS
-================================ */
+/* ============================
+      FOOTER COLUMNS
+============================ */
 .sn-footer-col h4 {
   font-size: 18px;
-  color: #dbeafe;              /* Light blue heading */
-  margin-bottom: 15px;
   font-weight: 600;
+  color: var(--neon);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
 .sn-footer-col ul {
@@ -82,44 +91,47 @@
 
 .sn-footer-col ul li {
   margin-bottom: 10px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 15px;
-  color: #ffffff;
+  color: var(--text-light);
+  opacity: 0.85;
 }
 
 .sn-footer-col ul li a {
+  color: var(--text-light);
   text-decoration: none;
-  color: #ffffff;
   transition: 0.3s ease;
 }
 
 .sn-footer-col ul li a:hover {
-  color: #dbeafe;
-  text-decoration: underline;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
-/* ICON COLOR INSIDE CONTACT */
+/* Contact icons color */
 .sn-footer-col ul li svg {
-  color: #dbeafe;
+  color: var(--neon);
+  filter: drop-shadow(0 0 6px var(--neon-glow));
 }
 
-/* ================================
-     COPYRIGHT
-================================ */
+/* ============================
+      COPYRIGHT SECTION
+============================ */
 .sn-footer-bottom {
   margin-top: 40px;
   text-align: center;
   font-size: 14px;
-  color: #ffffff;
+  color: var(--text-muted);
   padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--neon);
+  text-shadow: 0 0 8px rgba(14, 228, 255, 0.2);
 }
 
-/* ================================
-     RESPONSIVE
-================================ */
+/* ============================
+         RESPONSIVE
+============================ */
 @media (max-width: 900px) {
   .sn-footer-container {
     grid-template-columns: 1fr 1fr;

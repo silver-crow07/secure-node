@@ -1,81 +1,88 @@
-/* ================================
-   CAREERS PAGE – MODERN WHITE + BLUE
-================================ */
+/* ====================================================
+   SECURENODE — CAREERS PAGE (NEON CYBER DARK THEME)
+==================================================== */
 
 .careers-page {
-  padding: 20px 8% 60px; 
-  background: #f8fafc;
-  font-family: "Poppins", sans-serif;
+  padding: 40px 8% 80px;
+  background: var(--bg-main);
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-light);
 }
 
-/* HEADINGS */
+/* MAIN TITLE */
 .careers-title {
   text-align: center;
   font-size: 36px;
   font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 10px;
+  color: var(--neon);
+  text-shadow: 0 0 14px var(--neon-glow);
+  margin-bottom: 12px;
 }
 
 .careers-subtitle {
   text-align: center;
-  color: #475569;
+  color: var(--text-muted);
   font-size: 17px;
   max-width: 650px;
   margin: 0 auto 40px;
 }
 
-/* POSITIONS */
+/* OPEN POSITIONS HEADING */
 .positions-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: #0f172a;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
+  margin-bottom: 20px;
 }
 
+/* POSITIONS LIST */
 .positions-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .position-item {
-  background: #ffffff;
-  border: 1px solid #cce5ff;
-  padding: 14px 18px;
-  border-radius: 10px;
+  background: #0d141c;
+  border: 1px solid var(--neon);
+  padding: 16px 20px;
+  border-radius: 12px;
   margin-bottom: 15px;
 
   cursor: pointer;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
+  color: var(--neon);
   transition: 0.3s ease;
-  color: #087eff;
+
+  box-shadow: 0 0 15px rgba(8, 232, 255, 0.08);
 }
 
 .position-item:hover {
-  background: #e9f3ff;
-  transform: translateY(-3px);
-  border-color: #087eff;
+  background: rgba(8, 232, 255, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px var(--neon-glow);
 }
 
-/* APPLY FORM SECTION */
+/* APPLY FORM BOX */
 .application-form {
-  background: #ffffff;
+  background: #0b0f16;
   padding: 35px 28px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 25px rgba(8, 232, 255, 0.15);
   max-width: 700px;
   margin: 40px auto;
 }
 
 .application-form h3 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
 /* FORM INPUTS */
@@ -89,35 +96,45 @@
 .application-form textarea {
   padding: 14px 16px;
   border-radius: 10px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--neon);
   font-size: 16px;
-  background: #ffffff;
+
+  background: #0e1621;
+  color: var(--text-light);
+
+  box-shadow: 0 0 10px rgba(8, 232, 255, 0.12);
   transition: 0.3s ease;
 }
 
 .application-form input:focus,
 .application-form textarea:focus {
-  border-color: #087eff;
-  box-shadow: 0 0 8px rgba(8,126,255,0.3);
+  border-color: var(--neon);
+  box-shadow: 0 0 20px var(--neon-glow);
+}
+
+/* FILE INPUT SPECIAL FIX */
+.application-form input[type="file"] {
+  padding: 10px;
 }
 
 /* SUBMIT BUTTON */
 .application-form button {
-  background: #087eff;
+  background: var(--neon);
   border: none;
   padding: 14px;
-  color: #ffffff;
+  color: #000;
   border-radius: 10px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 10px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .application-form button:hover {
-  background: #006edc;
+  background: #00e2ff;
   transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--neon-glow);
 }
 
 /* RESPONSIVE */
@@ -128,5 +145,9 @@
 
   .application-form {
     padding: 25px;
+  }
+
+  .position-item {
+    font-size: 16px;
   }
 }

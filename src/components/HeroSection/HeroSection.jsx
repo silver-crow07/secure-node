@@ -2,6 +2,7 @@
 import React from "react";
 import "./HeroSection.css";
 import heroImg from "../../assets/hero1.png";
+import "../../styles/global.css";
 
 function HeroSection() {
   return (

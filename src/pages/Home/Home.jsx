@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import aboutImg from "../../assets/about.png";
 import "./Home.css";
+import "../../styles/global.css";
+
+
+
 
 const Home = () => {
   // update sections with ids for each card

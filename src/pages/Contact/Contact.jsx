@@ -5,48 +5,39 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div className="contact-page">
-
-      <div className="contact-header">
-        <h2>Contact Us</h2>
-        <p>We’re here to assist you with cybersecurity solutions, inquiries, or support.</p>
+    <main className="contact-wrapper" >
+      {/* HEADER */}
+      <div className="contact-heading">
+        <h1>Contact <span>SecureNode</span></h1>
+        <p>We are always available to assist you with cybersecurity solutions.</p>
       </div>
 
-      <section className="contact-card">
-        <h3>Send Us a Message</h3>
+      {/* CONTACT FORM */}
+      <div className="contact-card">
+        <h2>Send Us a Message</h2>
         <ContactForm />
-      </section>
+      </div>
 
-      <section className="contact-card contact-info">
-        <h3>Direct Contact</h3>
+      {/* CONTACT INFO */}
+      <div className="contact-card">
+        <h2>Direct Contact</h2>
         <p><strong>Email:</strong> info@securenode.com</p>
         <p><strong>Phone:</strong> +91-1234567890</p>
-        <p><strong>Address:</strong> 123 Cyber Street, India</p>
-      </section>
+        <p><strong>Address:</strong> Mumbai, India</p>
+      </div>
 
-      <section className="social-section">
-        <h3>Follow Us</h3>
+      {/* SOCIAL LINKS */}
+      <div className="contact-social">
+        <h2>Follow Us</h2>
 
         <div className="social-links">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-linkedin"></i> LinkedIn
-          </a>
-
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-facebook"></i> Facebook
-          </a>
-
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram"></i> Instagram
-          </a>
-
-          <a href="https://whatsapp.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-whatsapp"></i> Whatsapp
-          </a>
+          <a href="https://linkedin.com" target="_blank"><i className="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram"></i> Instagram</a>
+          <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook"></i> Facebook</a>
+          <a href="https://whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
-      </section>
-
-    </div>
+      </div>
+    </main>
   );
 }
 

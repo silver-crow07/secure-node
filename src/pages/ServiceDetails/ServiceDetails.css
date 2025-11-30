@@ -1,64 +1,81 @@
-/* ================================
-   SERVICE DETAILS (LIGHT + MODERN)
-================================ */
+/* ============================================================
+   SERVICE DETAILS PAGE — SECURENODE CYBER NEON THEME
+============================================================ */
 
+/* MAIN PAGE */
 .service-details-page {
-  background: #f8fafc;
-  padding: 40px 40px 60px;
+  background: var(--bg-main);
+  padding: 110px 40px 70px;
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  color: var(--text-light);
 }
 
+/* MAIN WRAPPER CARD */
 .service-details-container {
   max-width: 950px;
   width: 100%;
-  background: #ffffff;
-  padding: 40px 45px;
-  border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e2e8f0;
+  background: rgba(12, 18, 25, 0.85);
+  padding: 45px;
+  border-radius: 20px;
+
+  border: 1px solid var(--neon);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 28px rgba(8, 232, 255, 0.15);
 }
 
-/* HEADING */
+/* PAGE TITLE */
 .service-details-title {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--neon);
   text-align: center;
   margin-bottom: 12px;
+  text-shadow: 0 0 22px var(--neon-glow);
 }
 
+/* DESCRIPTION */
 .service-details-description {
   text-align: center;
   font-size: 17px;
-  color: #475569;
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 35px;
 }
 
-/* SECTIONS */
+/* SECTION WRAPPER */
 .service-details-section {
   margin-bottom: 35px;
-  padding: 20px 25px;
-  background: #fefefe;
-  border-left: 4px solid #087eff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 22px 25px;
+
+  background: rgba(15, 20, 28, 0.85);
+  border-left: 4px solid var(--neon);
+  border-radius: 14px;
+
+  box-shadow: 0 0 18px rgba(8, 232, 255, 0.12);
+  transition: 0.3s ease;
 }
 
+.service-details-section:hover {
+  box-shadow: 0 0 26px rgba(8, 232, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+/* SECTION HEADING */
 .service-details-section h3 {
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--neon);
   margin-bottom: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
+  text-shadow: 0 0 14px var(--neon-glow);
 }
 
 .icon {
-  color: #087eff;
+  color: var(--neon);
   font-size: 22px;
 }
 
@@ -69,101 +86,104 @@
 
 .service-details-section li {
   font-size: 16px;
-  color: #374151;
+  color: var(--text-light);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 8px;
+  opacity: 0.85;
 }
 
 .list-icon {
-  color: #087eff;
+  color: var(--neon);
 }
 
-/* BUTTONS */
+/* BUTTON ROW */
 .service-details-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 35px;
 }
 
-.service-details-back-btn,
-.service-details-cta-btn {
+/* BACK BUTTON */
+.service-details-back-btn {
   padding: 12px 20px;
-  font-size: 15px;
+  background: #1a2433;
+  border: 1px solid var(--neon);
+  color: var(--text-light);
+  border-radius: 10px;
   font-weight: 600;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
-  text-decoration: none;
   transition: 0.3s ease;
 }
 
-/* BACK BUTTON */
-.service-details-back-btn {
-  background: #e2e8f0;
-  color: #1e293b;
-}
-
 .service-details-back-btn:hover {
-  background: #cbd5e1;
+  background: #243144;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px var(--neon-glow);
 }
 
 /* CTA BUTTON */
 .service-details-cta-btn {
-  background: #087eff;
-  color: white;
+  padding: 12px 22px;
+  background: var(--neon);
+  color: black;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: 0.3s ease;
 }
 
 .service-details-cta-btn:hover {
-  background: #006fde;
+  background: var(--neon-hover);
+  box-shadow: 0 0 25px var(--neon-glow);
+  transform: translateY(-3px);
 }
 
-/* 404 */
+/* NOT FOUND */
 .service-details-not-found {
   padding: 150px 20px;
-  font-size: 24px;
+  font-size: 26px;
   text-align: center;
-  color: #ef4444;
+  color: #ff6b6b;
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .service-details-container {
-    padding: 35px 30px;
+    padding: 35px;
   }
 
   .service-details-title {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
   .service-details-page {
-    padding: 110px 25px 50px;
+    padding: 110px 25px 60px;
   }
 
   .service-details-buttons {
     flex-direction: column;
-    gap: 15px;
-  }
-
-  .service-details-container {
-    padding: 30px;
+    gap: 18px;
   }
 
   .service-details-title {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .service-details-title {
-    font-size: 23px;
+    font-size: 24px;
   }
 
   .service-details-section {

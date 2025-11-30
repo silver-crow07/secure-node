@@ -5,7 +5,7 @@
 }
 
 main {
-  background: #ffffff !important;
+  background: var(--bg-main);
 }
 
 a {

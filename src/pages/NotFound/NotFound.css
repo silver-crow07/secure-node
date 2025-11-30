@@ -1,15 +1,61 @@
-/* src/pages/NotFound/NotFound.css */
+/* =============================================
+   404 PAGE — CYBER NEON THEME
+============================================= */
+
 .notfound-page {
+  background: var(--bg-main);
+  min-height: 100vh;
+  padding-top: 140px;
   text-align: center;
-  padding: 4rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-light);
 }
 
+/* HEADING */
+.notfound-page h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--neon);
+  margin-bottom: 12px;
+  text-shadow: 0 0 18px var(--neon-glow);
+}
+
+/* SUBTEXT */
+.notfound-page p {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CTA BUTTON (Neon) */
 .cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #1d4ed8;
-  color: white;
-  border-radius: 8px;
+  padding: 14px 32px;
+  margin-top: 35px;
+  background: var(--neon);
+  color: black;
+  font-weight: 700;
+  border-radius: 10px;
   text-decoration: none;
-  margin-top: 2rem;
+  font-size: 18px;
+
+  box-shadow: 0 0 15px var(--neon-glow);
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px var(--neon-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notfound-page h2 {
+    font-size: 34px;
+  }
+
+  .notfound-page p {
+    font-size: 16px;
+  }
 }

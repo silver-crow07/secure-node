@@ -1,38 +1,43 @@
-/* ================================
-   SOLUTION DETAILS (LIGHT + MODERN)
-================================ */
+/* ==========================================================
+   SOLUTION DETAILS — CYBER NEON THEME (FINAL)
+========================================================== */
 
 .solution-details-page {
-  background: #f8fafc;
-  padding: 40px 40px 60px;
+  background: var(--bg-main);
+  padding: 110px 40px 60px;
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  color: var(--text-light);
 }
 
+/* MAIN CARD */
 .solution-details-container {
   max-width: 950px;
   width: 100%;
-  background: #ffffff;
+  background: rgba(10, 16, 23, 0.75);
   padding: 40px 45px;
   border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--neon);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(8, 232, 255, 0.18);
 }
 
 /* HEADING */
 .solution-details-title {
-  font-size: 36px;
-  font-weight: 800;
-  color: #0f172a;
+  font-size: 38px;
+  font-weight: 900;
   text-align: center;
+  color: var(--neon);
   margin-bottom: 12px;
+  text-shadow: 0 0 20px var(--neon-glow);
 }
 
+/* DESCRIPTION */
 .solution-details-description {
+  color: var(--text-muted);
+  font-size: 18px;
   text-align: center;
-  font-size: 17px;
-  color: #475569;
   line-height: 1.7;
   margin-bottom: 35px;
 }
@@ -41,57 +46,78 @@
 .solution-details-section {
   margin-bottom: 35px;
   padding: 20px 25px;
-  background: #fefefe;
-  border-left: 4px solid #087eff;
+  background: rgba(15, 22, 33, 0.6);
+  border-left: 4px solid var(--neon);
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(8, 232, 255, 0.1);
 }
 
+/* SECTION HEADING */
 .solution-details-section h3 {
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 15px;
+  color: var(--neon);
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px var(--neon-glow);
 }
 
-.icon {
-  color: #087eff;
-  font-size: 22px;
-}
-
-/* LISTS */
+/* LIST ITEMS */
 .solution-details-section ul {
   margin-left: 5px;
 }
 
 .solution-details-section li {
+  color: var(--text-light);
+  opacity: 0.9;
   font-size: 16px;
-  color: #374151;
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
+/* BLUE BULLET ICON */
 .list-icon {
-  color: #087eff;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
 /* BUTTONS */
 .solution-details-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 35px;
+  margin-top: 38px;
 }
 
-.solution-details-back-btn,
-.solution-details-cta-btn {
-  padding: 12px 20px;
-  font-size: 15px;
+/* BACK BUTTON */
+.solution-details-back-btn {
+  padding: 12px 22px;
+  background: #1e293b;
+  color: var(--text-light);
+  border-radius: 8px;
   font-weight: 600;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #334155;
+  transition: 0.3s;
+}
+
+.solution-details-back-btn:hover {
+  background: #334155;
+  transform: translateY(-3px);
+}
+
+/* CTA BUTTON */
+.solution-details-cta-btn {
+  padding: 12px 24px;
+  background: var(--neon);
+  color: black;
+  font-weight: 700;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -100,72 +126,47 @@
   transition: 0.3s ease;
 }
 
-/* BACK BUTTON */
-.solution-details-back-btn {
-  background: #e2e8f0;
-  color: #1e293b;
-}
-
-.solution-details-back-btn:hover {
-  background: #cbd5e1;
-}
-
-/* CTA BUTTON */
-.solution-details-cta-btn {
-  background: #087eff;
-  color: white;
-}
-
 .solution-details-cta-btn:hover {
-  background: #006fde;
+  background: var(--neon-hover);
+  box-shadow: 0 0 18px var(--neon-glow);
+  transform: translateY(-3px);
 }
 
-/* 404 */
+/* NOT FOUND */
 .solution-details-not-found {
   padding: 150px 20px;
-  font-size: 24px;
   text-align: center;
-  color: #ef4444;
+  font-size: 26px;
+  color: #ff4d4d;
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .solution-details-container {
     padding: 35px 30px;
   }
-
   .solution-details-title {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
   .solution-details-page {
-    padding: 110px 25px 50px;
+    padding: 120px 20px 60px;
   }
-
   .solution-details-buttons {
     flex-direction: column;
     gap: 15px;
   }
-
-  .solution-details-container {
-    padding: 30px;
-  }
-
   .solution-details-title {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .solution-details-title {
-    font-size: 23px;
+    font-size: 24px;
   }
-
   .solution-details-section {
     padding: 18px;
   }

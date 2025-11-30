@@ -1,59 +1,84 @@
+/* ============================================================
+      SECURENODE — BLOG DETAILS (NEON CYBER DARK THEME)
+============================================================ */
+
+/* MAIN PAGE */
 .article-page {
-  background: #f8fafc;
+  background: var(--bg-main);
   padding: 120px 20px 60px;
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  color: var(--text-light);
 }
 
+/* BLOG ARTICLE CONTAINER */
 .article-container {
   max-width: 850px;
   width: 100%;
-  background: white;
+  background: #0b0f16;
   padding: 40px 35px;
   border-radius: 16px;
-  border: 1px solid #dce7f7;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 25px rgba(8, 232, 255, 0.12);
+
+  transition: 0.3s ease;
 }
 
+/* BLOG TITLE */
 .article-container h1 {
   font-size: 34px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--neon);
+  text-shadow: 0 0 14px var(--neon-glow);
   margin-bottom: 12px;
 }
 
+/* METADATA */
 .article-meta {
   display: flex;
   justify-content: space-between;
-  color: #1e40af;
+  color: var(--text-muted);
   font-weight: 600;
   margin-bottom: 25px;
 }
 
+.article-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ARTICLE TEXT */
 .article-content {
-  color: #475569;
+  color: var(--text-light);
+  opacity: 0.9;
   line-height: 1.8;
   font-size: 17px;
   margin-bottom: 35px;
+  white-space: pre-line;
 }
 
+/* BACK BUTTON */
 .back-btn {
   padding: 12px 22px;
-  background: #087eff;
-  color: white;
+  background: var(--neon);
+  color: #000;
+  font-weight: 700;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
   transition: 0.3s ease;
 }
 
 .back-btn:hover {
-  background: #005ecc;
+  background: #00e2ff;
+  box-shadow: 0 0 22px var(--neon-glow);
   transform: translateY(-3px);
 }
 
+/* RESPONSIVE */
 @media (max-width: 600px) {
   .article-container {
     padding: 25px;

@@ -1,145 +1,130 @@
-/* ==========================
-   CONTACT PAGE WRAPPER
-========================== */
-.contact-page {
-  max-width: 900px;
-  margin: 90px auto;
-  padding: 2.5rem;
-  background: #ffffff;
-  border-radius: 16px;
-  border: 1px solid #ddecff;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+/* ============================
+   CONTACT PAGE (NEON DARK)
+=========================== */
+
+.contact-wrapper {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background:  var(--bg-main);
   font-family: "Poppins", sans-serif;
+  color: var(--text-light);
+  
 }
 
-/* ==========================
-   HEADER
-========================== */
-.contact-header {
+/* HEADER */
+.contact-heading {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
+  background:  var(--bg-main);
 }
 
-.contact-header h2 {
-  color: #087eff;
-  font-size: 2rem;
-  font-weight: 700;
+.contact-heading h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--neon);
+  text-shadow: 0 0 15px var(--neon-glow);
 }
 
-.contact-header p {
-  color: #444;
-  margin-top: 8px;
+.contact-heading h1 span {
+  color: var(--theme-primary);
 }
 
-/* ==========================
-   SECTION CARD UI
-========================== */
+.contact-heading p {
+  color: var(--text-muted);
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* CARD */
 .contact-card {
-  background: #f6faff;
-  padding: 2rem;
-  border-radius: 14px;
-  margin-bottom: 2rem;
-  border-left: 4px solid #087eff;
-  box-shadow: 0 5px 18px rgba(8, 126, 255, 0.08);
-  transition: 0.25s ease;
+  background:  var(--bg-main);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  margin-bottom: 35px;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
 }
 
 .contact-card:hover {
-  box-shadow: 0 8px 25px rgba(8, 126, 255, 0.15);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.35);
 }
 
-/* ==========================
-   HEADINGS
-========================== */
-.contact-card h3 {
-  color: #087eff;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+.contact-card h2 {
   text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--neon);
+  text-shadow: 0 0 12px var(--neon-glow);
 }
 
-/* ==========================
-   PARAGRAPHS
-========================== */
 .contact-card p {
-  margin: 0.6rem 0;
-  color: #333;
-  font-size: 1rem;
   text-align: center;
+  margin: 8px 0;
+  color: var(--text-light);
 }
 
-/* Highlight strong labels */
 .contact-card p strong {
-  color: #005ee0;
+  color: var(--theme-primary);
 }
 
-/* ==========================
-   RESPONSIVE DESIGN
-========================== */
-@media (max-width: 768px) {
-  .contact-page {
-    padding: 1.4rem;
-    margin-top: 70px;
-  }
-
-  .contact-card {
-    padding: 1.4rem;
-  }
-
-  .contact-header h2 {
-    font-size: 1.7rem;
-  }
-
-  .contact-header p {
-    font-size: 0.95rem;
-  }
-}
-
-/* ================================
-   SOCIAL MEDIA SECTION WITH ICONS
-================================ */
-
-.social-section {
-  margin-top: 50px;
+/* SOCIAL AREA */
+.contact-social {
   text-align: center;
+  margin-top: 50px;
+  background:  var(--bg-main);
+  padding: 20px;
 }
 
-.social-section h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 20px;
+.contact-social h2 {
+  color: var(--neon);
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+  text-shadow: 0 0 12px var(--neon-glow);
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .social-links a {
-  background: #ffffff;
-  padding: 12px 20px;
+  background:  var(--bg-main);
+  padding: 12px 22px;
   border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  color: #087eff;
+  border: 1px solid var(--neon);
+  color: var(--neon);
   font-weight: 600;
-  font-size: 15px;
   display: flex;
   align-items: center;
   gap: 8px;
   transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.social-links a i {
-  font-size: 18px;
 }
 
 .social-links a:hover {
-  background: #087eff;
-  color: #ffffff;
-  box-shadow: 0 0 18px rgba(8, 126, 255, 0.35);
+  background: var(--neon);
+  color: #000;
   transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--neon-glow);
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    margin-top: 140px;
+    padding: 15px;
+  }
+
+  .contact-heading h1 {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+}
+

@@ -1,205 +1,167 @@
-/* -------------------------
-   HERO CONTAINER
-------------------------- */
+/* ========================================================
+        HERO SECTION — NEON CYBER DARK THEME
+======================================================== */
+
 .hero-container {
-  position: relative;
   width: 100%;
-  min-height: 50vh;
-  background-color: var(--background-color);
+  background: var(--bg-main);
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
+  padding: 60px 20px;
   box-sizing: border-box;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
 }
 
-/* -------------------------
-   MAIN HERO SECTION
-------------------------- */
 .hero-section {
+  max-width: 1300px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  color: var(--text-color);
-  max-width: 1300px;
-  padding: 0 30px;
-  box-sizing: border-box;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  gap: 50px;
+  padding: 0 20px;
 }
 
-/* -------------------------
-   TEXT BLOCK
-------------------------- */
+/* ==========================
+      TEXT SECTION
+========================== */
 .hero-text {
   flex: 1;
 }
 
 .hero-title {
-  margin: 0 0 0.5rem 0;
-  color: #000;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
   font-size: 50px;
-  line-height: 119%;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--text-light);
 }
 
-.glow {
-  color: #087EFF;
+.hero-title .glow {
+  color: var(--neon) !important;
+  text-shadow: 0 0 15px var(--neon-glow);
 }
 
 .hero-subtitle {
-  margin: 8px 0 0 0;
+  margin-top: 12px;
   max-width: 550px;
-  color: #131111;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  color: var(--text-muted);
   font-size: 20px;
-  line-height: 150%;
+  line-height: 155%;
 }
 
-/* -------------------------
-   IMAGE SECTION
-------------------------- */
+/* ==========================
+      BUTTONS
+========================== */
+.hero-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: var(--neon);
+  color: black;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--neon-soft);
+  box-shadow: 0 0 20px var(--neon-glow);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--neon);
+  border: 1.5px solid var(--neon);
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--neon);
+  color: black;
+  box-shadow: 0 0 20px var(--neon-glow);
+  transform: translateY(-2px);
+}
+
+/* ==========================
+       HERO IMAGE
+========================== */
 .hero-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: -25px;
 }
 
 .hero-image img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50px 50px 0 0;
+  width: 390px;
+  height: 340px;
   object-fit: cover;
+
+  /* Cyber floating effect */
   animation: float 4s ease-in-out infinite;
-  transition: transform 0.3s ease;
-  display: block;
+
+  border-radius: 40px;
+  border: 2px solid var(--neon);
+  
+
+  transition: 0.3s ease;
 }
 
-/* -------------------------
-   BUTTONS
-------------------------- */
-.hero-buttons {
-  margin-top: 25px;
-  display: flex;
-  gap: 15px;
+.hero-image img:hover {
+  transform: scale(1.05);
+  
 }
 
-.btn-primary,
-.btn-secondary {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-  padding: 14px 24px;
-}
 
-.btn-primary {
-  width: 142px;
-  height: 56px;
-  background-color: #087EFF;
-  color: white;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #005ecc;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  width: 237.38px;
-  height: 56px;
-  background-color: transparent;
-  color: #000;
-  border: 1.5px solid #ADD8E6;
-}
-
-.btn-secondary:hover {
-  background-color: #005ecc;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* -------------------------
-   FLOAT ANIMATION
-------------------------- */
+/* ==========================
+    FLOAT ANIMATION
+========================== */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50%      { transform: translateY(-16px); }
 }
 
-/* -------------------------
-   RESPONSIVE DESIGN
-------------------------- */
 
-/* TABLET (max 1024px) */
+/* ==========================
+      RESPONSIVE (TABLET)
+========================== */
 @media (max-width: 1024px) {
   .hero-section {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    gap: 20px;
-    padding: 0 20px;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
   }
 
   .hero-image img {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
   }
 
   .hero-title {
-    font-size: 40px;
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
+    font-size: 42px;
   }
 }
 
-/* MOBILE (max 768px) */
+
+/* ==========================
+      RESPONSIVE (MOBILE)
+========================== */
 @media (max-width: 768px) {
-  .hero-container {
-    min-height: auto !important;
-    align-items: flex-start;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    overflow: visible !important;
-  }
-
   .hero-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 18px;
-    padding: 0 15px;
-    margin-bottom: 0 !important;
-  }
-
-  .hero-text {
-    order: 1;
-  }
-
-  .hero-image {
-    order: 2;
-    margin-bottom: 12px;
-  }
-
-  .hero-image img {
-    width: 220px;
-    height: 220px;
-    margin-bottom: 0 !important;
+    padding: 0;
   }
 
   .hero-title {
@@ -210,7 +172,6 @@
     font-size: 16px;
   }
 
-  /* Buttons */
   .hero-buttons {
     justify-content: center;
     flex-wrap: wrap;
@@ -218,23 +179,20 @@
 
   .btn-primary,
   .btn-secondary {
-    width: 50%;
+    width: 48%;
     text-align: center;
   }
 
-  .recognition-banner {
-    margin-top: 0 !important;
-    padding-top: 18px;
+  .hero-image img {
+    width: 220px;
+    height: 220px;
   }
 }
 
-/* SMALL MOBILE (max 480px) */
+/* ==========================
+  RESPONSIVE (SMALL MOBILE)
+========================== */
 @media (max-width: 480px) {
-  .hero-section {
-    gap: 20px;
-    padding: 0 10px;
-  }
-
   .hero-image img {
     width: 180px;
     height: 180px;
@@ -243,69 +201,4 @@
   .hero-title {
     font-size: 28px;
   }
-
-  .hero-subtitle {
-    font-size: 15px;
-  }
-}
-
-/* TABLET-SPECIFIC (769px–1024px): fix banner gap + button centering */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-container {
-    min-height: auto !important;
-    align-items: center;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    overflow: visible !important;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 22px;
-  }
-
-  .hero-buttons {
-    justify-content: center !important;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 50%;
-    text-align: center;
-  }
-
-  .hero-image {
-    margin-bottom: 15px;
-  }
-
-  .recognition-banner {
-    margin-top: 0 !important;
-    padding-top: 15px;
-  }
-}
-
-/* LARGE SCREEN FIX */
-@media (min-width: 1025px) {
-  .hero-container {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .recognition-banner {
-    margin-top: 10px !important;
-    padding-top: 0 !important;
-  }
-}
-
-/* SAFETY FIX: Prevent bottom gap */
-.hero-container::after {
-  content: "";
-  display: block;
-  height: 0;
-  margin: 0;
-  padding: 0;
 }

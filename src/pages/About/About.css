@@ -1,9 +1,13 @@
+/* ============================================================
+      SECURENODE — ABOUT PAGE (NEON CYBER DARK THEME)
+============================================================ */
+
 /* WRAPPER */
 .about-wrapper {
   width: 100%;
-  color: #0f172a;
-  padding-top: 20px;
-  background: #f8fafc;
+  padding: 40px 20px;
+  background: var(--bg-main);
+  color: var(--text-light);
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
@@ -13,33 +17,34 @@
   text-align: center;
   max-width: 850px;
   margin: 0 auto 60px;
-  padding: 0 15px;
 }
 
 .about-hero-light h1 {
   font-size: 40px;
-  font-weight: 700;
-  color: #0f172a;
+  font-weight: 800;
+  color: var(--text-light);
 }
 
 .about-hero-light h1 span {
-  color: #087eff;
+  color: var(--neon);
+  text-shadow: 0 0 12px var(--neon-glow);
 }
 
 .about-hero-light p {
-  color: #475569;
-  margin-top: 15px;
+  color: var(--text-muted);
+  margin-top: 12px;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* SECTION HEADING */
 .section-heading {
   text-align: center;
   font-size: 32px;
+  font-weight: 800;
+  color: var(--neon);
   margin-bottom: 25px;
-  font-weight: 700;
-  color: #087eff;
+  text-shadow: 0 0 12px var(--neon-glow);
   position: relative;
 }
 
@@ -48,164 +53,187 @@
   display: block;
   width: 80px;
   height: 3px;
-  background: #087eff;
+  background: var(--neon);
   margin: 10px auto 0;
   border-radius: 3px;
+  box-shadow: 0 0 12px var(--neon-glow);
 }
 
-/* ABOUT SECTION PARAGRAPH */
+/* GENERIC PARAGRAPH SECTION */
 .about-section-light {
   max-width: 900px;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
   text-align: center;
-  padding: 0 15px;
 }
 
 .about-section-light p {
-  color: #475569;
+  color: var(--text-muted);
   font-size: 18px;
   line-height: 1.7;
 }
 
-/* MISSION + VISION */
+/* MISSION + VISION CARDS */
 .about-dual-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   max-width: 1000px;
   margin: 0 auto 60px;
-  padding: 0 10px;
 }
 
 .about-card {
-  background: #ffffff;
+  background: #0b0f16;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 18px rgba(14, 228, 255, 0.12);
   text-align: center;
+  transition: 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--neon-glow);
 }
 
 .about-card h3 {
-  color: #087eff;
-  margin-bottom: 12px;
+  color: var(--neon);
   font-size: 22px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px var(--neon-glow);
 }
 
-/* APPROACH GRID */
+.about-card p {
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* OUR APPROACH GRID */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
-  margin-top: 30px;
-  padding: 0 10px;
 }
 
 .icon-card {
-  background: white;
+  background: #0e1621;
   border-radius: 14px;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  border-top: 4px solid #087eff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 18px rgba(14, 228, 255, 0.12);
+  color: var(--text-light);
   font-weight: 600;
-  color: #0f172a;
+  transition: 0.3s ease;
 }
 
 .icon-card svg {
-  color: #087eff;
+  color: var(--neon);
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px var(--neon-glow);
+}
+
+.icon-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--neon-glow);
 }
 
 /* COMPARE GRID */
 .compare-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 0 10px;
+  gap: 25px;
 }
 
 .compare-box {
-  background: white;
+  background: #0b0f16;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 18px rgba(14, 228, 255, 0.12);
 }
 
 .compare-box h3 {
-  color: #087eff;
+  color: var(--neon);
   margin-bottom: 10px;
+  text-shadow: 0 0 8px var(--neon-glow);
 }
 
 .compare-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .compare-box ul li {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
-  color: #334155;
+  padding: 6px 0;
+  color: var(--text-light);
+  opacity: 0.85;
 }
 
-/* CORE VALUES (Updated to match Our Approach cards) */
+.compare-box ul li svg {
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon-glow);
+}
+
+/* CORE VALUES */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 25px;
-  margin-top: 30px;
-  padding: 0 10px;
 }
 
 .value-card {
-  background: #ffffff;
+  background: #0e1621;
   padding: 25px;
   border-radius: 14px;
+  border: 1px solid var(--neon);
   text-align: center;
-  border-top: 4px solid #087eff;  /* same theme */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 0 18px rgba(14, 228, 255, 0.12);
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text-light);
   transition: 0.3s ease;
 }
 
 .value-card svg {
-  color: #087eff;
+  color: var(--neon);
   font-size: 32px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px var(--neon-glow);
 }
 
 .value-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 0 25px var(--neon-glow);
 }
 
-/* RESPONSIVE */
+/* ==========================
+        RESPONSIVE
+========================== */
 
-/* TABLET */
 @media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .values-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .about-dual-box {
     grid-template-columns: 1fr;
   }
+
   .compare-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-  .about-hero-light h1 {
-    font-size: 32px;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -214,19 +242,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-wrapper {
-    padding: 110px 20px 50px;
+  .about-hero-light h1 {
+    font-size: 30px;
   }
 }
 
-/* SMALL MOBILE */
 @media (max-width: 480px) {
   .values-grid {
     grid-template-columns: 1fr;
   }
 
   .section-heading::after {
-    width: 50px;
+    width: 60px;
   }
 }
 
