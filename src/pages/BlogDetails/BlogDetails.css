@@ -30,7 +30,10 @@
 .article-container h1 {
   font-size: 34px;
   font-weight: 800;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 14px var(--neon-glow);
   margin-bottom: 12px;
 }

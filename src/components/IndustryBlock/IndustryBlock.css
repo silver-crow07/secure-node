@@ -22,7 +22,11 @@
 }
 
 .industries-title span {
-  color: var(--neon);
+  
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 12px var(--neon-glow);
 }
 
@@ -87,7 +91,10 @@
 .industryCard h3 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
   text-shadow: 0 0 8px var(--neon-glow);
   margin-bottom: 10px;
 }
@@ -127,7 +134,7 @@
 .industryCard-btn:hover {
   background: var(--neon-soft);
   box-shadow: 0 0 18px var(--neon-glow);
-  transform: translateX(-50%) translateY(-3px);
+  transform: translateY(-2px);
 }
 
 /* =============================

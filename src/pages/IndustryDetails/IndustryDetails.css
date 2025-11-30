@@ -30,7 +30,10 @@
 .industry-details-title {
   font-size: 38px;
   font-weight: 800;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: 12px;
   text-shadow: 0 0 22px var(--neon-glow);
@@ -67,7 +70,10 @@
 .industry-details-section h3 {
   font-size: 24px;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 15px;
   text-shadow: 0 0 14px var(--neon-glow);
 }

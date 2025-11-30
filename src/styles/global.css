@@ -12,7 +12,8 @@
   --text-light: #ffffff;       /* White paragraphs */
   --text-muted: #b5b5b5;       /* Light grey */
 
-  --neon: #0ee4ff;             /* Main neon blue */
+  --neon: #00faff;
+  --neon-gradient: linear-gradient(90deg, #00f0ff, #008cff);
   --neon-soft: #00c7e6;        /* Soft neon */
   --neon-glow: rgba(14, 228, 255, 0.4);
 

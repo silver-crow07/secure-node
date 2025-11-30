@@ -57,7 +57,10 @@
 .solutionCard-title {
   font-size: 20px;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
   text-shadow: 0 0 12px var(--neon-glow);
 }

@@ -15,7 +15,10 @@
   text-align: center;
   font-size: 36px;
   font-weight: 800;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 14px var(--neon-glow);
   margin-bottom: 12px;
 }
@@ -32,7 +35,10 @@
 .positions-title {
   font-size: 26px;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 10px var(--neon-glow);
   margin-bottom: 20px;
 }
@@ -81,7 +87,10 @@
   font-size: 26px;
   margin-bottom: 20px;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 10px var(--neon-glow);
 }
 

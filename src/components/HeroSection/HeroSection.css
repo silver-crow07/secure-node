@@ -19,7 +19,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  padding: 0 20px;
+  padding: 0 30px;
+  
+
 }
 
 /* ==========================
@@ -37,9 +39,15 @@
 }
 
 .hero-title .glow {
-  color: var(--neon) !important;
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 15px var(--neon-glow);
+  padding-right: 20px;
 }
+
+
 
 .hero-subtitle {
   margin-top: 12px;
@@ -114,7 +122,7 @@
   animation: float 4s ease-in-out infinite;
 
   border-radius: 40px;
-  border: 2px solid var(--neon);
+  
   
 
   transition: 0.3s ease;

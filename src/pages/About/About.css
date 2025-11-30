@@ -26,7 +26,10 @@
 }
 
 .about-hero-light h1 span {
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 12px var(--neon-glow);
 }
 
@@ -42,7 +45,10 @@
   text-align: center;
   font-size: 32px;
   font-weight: 800;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 25px;
   text-shadow: 0 0 12px var(--neon-glow);
   position: relative;
@@ -97,7 +103,10 @@
 }
 
 .about-card h3 {
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 22px;
   margin-bottom: 12px;
   text-shadow: 0 0 10px var(--neon-glow);

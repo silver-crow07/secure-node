@@ -20,7 +20,10 @@
 .blog-hero h1 {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 14px var(--neon-glow);
 }
 
@@ -37,7 +40,10 @@
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 40px;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 14px var(--neon-glow);
 }
 
@@ -81,7 +87,10 @@
 .blog-card h3 {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--text-light);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
 }
 

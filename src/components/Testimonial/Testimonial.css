@@ -14,7 +14,10 @@
 .testimonial-section h2 {
   font-size: 2.6rem;
   font-weight: 800;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 14px var(--neon-glow);
   margin-bottom: 20px;
 }

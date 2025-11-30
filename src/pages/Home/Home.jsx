@@ -4,7 +4,16 @@ import { Link } from "react-router-dom";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import aboutImg from "../../assets/about.png";
 import "./Home.css";
-import "../../styles/global.css";
+import blog1 from "../../assets/blog1.png";
+import blog2 from "../../assets/blog2.png";
+import blog3 from "../../assets/blog3.png";
+import blog4 from "../../assets/blog4.png";
+import user1 from "../../assets/user1.jpeg";
+import user2 from "../../assets/user2.jpeg";
+import user3 from "../../assets/user3.png";
+import user4 from "../../assets/user4.jpeg";
+import user5 from "../../assets/user5.jpeg";
+import user6 from "../../assets/user6.jpeg";
 
 
 
@@ -88,37 +97,37 @@ const testimonials = [
     text: "Secure Node helped us transform our online presence!",
     name: "Ayesha Khan",
     role: "CEO",
-    img: "/images/user1.png",
+    img: user1
   },
   {
     text: "Professional, creative, and very reliable team!",
     name: "Rohit Sharma",
     role: "Founder",
-    img: "/images/user2.png",
+    img: user2
   },
   {
     text: "Highly recommend for quality and on-time delivery.",
     name: "Sneha Verma",
     role: "Project Head",
-    img: "/images/user3.png",
+    img: user3
   },
   {
     text: "Their team exceeded our expectations in every way!",
     name: "Vikas Patil",
     role: "Product Manager",
-    img: "/images/user4.png",
+    img: user4
   },
   {
-    text: "Amazing communication and fast delivery!",
+    text: "Amazing communication and fast delivery services!",
     name: "Ritu Shah",
     role: "Operations Head",
-    img: "/images/user5.png",
+    img: user5
   },
   {
     text: "Quality work and very professional behavior.",
     name: "Aditya Mehta",
     role: "Entrepreneur",
-    img: "/images/user6.png",
+    img: user6
   },
 ];
 
@@ -312,10 +321,10 @@ return (
 
       <div className="modern-blog-grid">
         {[
-          { img: "/images/blog1.jpg", title: "Exploring Future Tech" },
-          { img: "/images/blog2.jpg", title: "How Security Impacts Growth" },
-          { img: "/images/blog3.jpg", title: "Innovating with AI" },
-          { img: "/images/blog4.jpg", title: "Web Trends 2025" },
+          { img: blog1, title: "Exploring Future Tech" },
+          { img: blog2, title: "How Security Impacts Growth" },
+          { img: blog3, title: "Innovating with AI" },
+          { img: blog4, title: "Web Trends 2025" },
         ].map((item, index) => (
           <div className="modern-blog-card" key={index}>
             <div className="blog-img-wrapper">

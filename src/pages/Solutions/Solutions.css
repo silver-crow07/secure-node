@@ -21,7 +21,10 @@
 }
 
 .solutions-title span {
-  color: var(--neon);
+ background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 15px var(--neon-glow);
 }
 

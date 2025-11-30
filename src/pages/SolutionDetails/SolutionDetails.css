@@ -28,7 +28,10 @@
   font-size: 38px;
   font-weight: 900;
   text-align: center;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 12px;
   text-shadow: 0 0 20px var(--neon-glow);
 }
@@ -57,7 +60,10 @@
 .solution-details-section h3 {
   font-size: 22px;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
   gap: 10px;

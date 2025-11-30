@@ -15,13 +15,17 @@
 .services-title {
   font-size: 42px;
   font-weight: 800;
-  color: var(--neon);
+
+  color: var(--text-light);
   margin-bottom: 14px;
   text-shadow: 0 0 22px var(--neon-glow);
 }
 
 .services-title span {
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* SUBTITLE */
@@ -78,7 +82,10 @@
 .service-card h3 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--neon);
+  background: var(--neon-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
   text-shadow: 0 0 8px var(--neon-glow);
 }
