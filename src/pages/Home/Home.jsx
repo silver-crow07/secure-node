@@ -351,48 +351,48 @@ const Home = () => {
       {/* ✅ Scrollable Sections */}
       {/* inside the render: map sections -> cards */}
       {sections.map((section, sIndex) => (
-  <section className="scroll-section" key={sIndex}>
-    <h2 className="section-heading">{section.title}</h2>
-    <p className="section-subheading">{section.subtitle}</p>
+        <section className="scroll-section" key={sIndex}>
+          <h2 className="section-heading">{section.title}</h2>
+          <p className="section-subheading">{section.subtitle}</p>
 
-    <div className="scroll-cards">
-      {section.cards.map((card) => {
+          <div className="scroll-cards">
+            {section.cards.map((card) => {
 
-        const baseRoute =
-          sIndex === 0 ? "/services" :
-          sIndex === 1 ? "/solutions" :
-          "/industries";
+              const baseRoute =
+                sIndex === 0 ? "/services" :
+                  sIndex === 1 ? "/solutions" :
+                    "/industries";
 
-        return (
-          <div className="scroll-card" key={card.id}>
+              return (
+                <div className="scroll-card" key={card.id}>
 
-            {/* ALWAYS SHOW IMAGE NOW */}
-            <div className="scroll-card-img">
-              <img src={card.image} alt={card.title} />
-            </div>
+                  {/* ALWAYS SHOW IMAGE NOW */}
+                  <div className="scroll-card-img">
+                    <img src={card.image} alt={card.title} />
+                  </div>
 
-            <h3>{card.title}</h3>
-            <p>{card.desc}</p>
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
 
-            <Link to={`${baseRoute}/${card.id}`} className="read-more-btn">
-              Read More →
+                  <Link to={`${baseRoute}/${card.id}`} className="read-more-btn">
+                    Read More →
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="view-more-wrapper">
+            <Link to={
+              sIndex === 0 ? "/services" :
+                sIndex === 1 ? "/solutions" :
+                  "/industries"
+            }>
+              <button className="view-more-btn">View More</button>
             </Link>
           </div>
-        );
-      })}
-    </div>
-
-    <div className="view-more-wrapper">
-      <Link to={
-        sIndex === 0 ? "/services" :
-        sIndex === 1 ? "/solutions" :
-        "/industries"
-      }>
-        <button className="view-more-btn">View More</button>
-      </Link>
-    </div>
-  </section>
-))}
+        </section>
+      ))}
 
 
 
@@ -406,21 +406,26 @@ const Home = () => {
 
         <div className="modern-blog-grid">
           {[
-            { img: blog1, title: "Exploring Future Tech" },
-            { img: blog2, title: "How Security Impacts Growth" },
-            { img: blog3, title: "Innovating with AI" },
-            { img: blog4, title: "Web Trends 2025" },
+            { id: "exploring-future-tech", img: blog1, title: "Exploring Future Tech" },
+            { id: "how-security-impacts-growth", img: blog2, title: "How Security Impacts Growth" },
+            { id: "innovating-with-ai", img: blog3, title: "Innovating with AI" },
+            { id: "web-trends-2025", img: blog4, title: "Web Trends 2025" },
           ].map((item, index) => (
             <div className="modern-blog-card" key={index}>
               <div className="blog-img-wrapper">
                 <img src={item.img} alt={item.title} />
               </div>
+
               <h3>{item.title}</h3>
               <p>Read the latest insights on {item.title.toLowerCase()}.</p>
-              <Link to="/blog" className="blog-readmore">Read More →</Link>
+
+              <Link to={`/blog/${item.id}`} className="blog-readmore">
+                Read More →
+              </Link>
             </div>
           ))}
         </div>
+
 
         <div className="blog-btn-wrapper">
           <Link to="/blog">
