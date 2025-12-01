@@ -13,7 +13,7 @@ const servicesData = [
     description: "Identify vulnerabilities in your systems through simulated cyber attacks and strengthen your defense.",
     image: service1, link: "/services/penetration-testing",
   },
-
+  
   {
     title: "Vulnerability Assessment",
     description: "Discover weak points before hackers do with deep system analysis and risk evaluation.",

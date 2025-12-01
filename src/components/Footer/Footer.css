@@ -141,15 +141,16 @@
 @media (max-width: 600px) {
   .sn-footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;   /* LEFT ALIGN */
   }
 
   .sn-footer-brand,
   .sn-footer-col {
-    margin: auto;
+    margin: 0;          /* REMOVE AUTO CENTER */
   }
 
   .sn-footer-socials {
-    justify-content: center;
+    justify-content: flex-start;  /* LEFT SIDE */
   }
 }
+
