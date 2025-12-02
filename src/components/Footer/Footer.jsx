@@ -1,3 +1,4 @@
+// src/components/Footer/Footer.jsx
 import { NavLink } from "react-router-dom";
 import { FaInstagram, FaLinkedin, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
@@ -6,7 +7,6 @@ import logo from "../../assets/Securenlogo.png";
 
 export default function Footer() {
   return (
-    
     <footer className="sn-footer">
       <div className="sn-footer-container">
 
@@ -26,28 +26,27 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* WHO ARE WE (replaces 'Services') */}
+        <div className="sn-footer-col">
+          <h4>Who are we</h4>
+          <ul>
+            <li><NavLink to="/about">About us</NavLink></li>
+            <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
+            <li><NavLink to="/terms">Terms &amp; Condition</NavLink></li>
+            <li><NavLink to="/pricing">Pricing and Refund Policy</NavLink></li>
+          </ul>
+        </div>
+
         {/* COMPANY LINKS */}
         <div className="sn-footer-col">
           <h4>Company</h4>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About Us</NavLink></li>
             <li><NavLink to="/services">Services</NavLink></li>
             <li><NavLink to="/solutions">Solutions</NavLink></li>
+            <li><NavLink to="/industries">Industries</NavLink></li>
             <li><NavLink to="/careers">Careers</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
-        </div>
-
-        {/* SERVICES */}
-        <div className="sn-footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
-            <li>Cloud Solutions</li>
-            <li>Security Services</li>
-            <li>Digital Strategy</li>
           </ul>
         </div>
 
@@ -67,6 +66,6 @@ export default function Footer() {
         © 2025 SecureNode — All Rights Reserved.
       </div>
     </footer>
-    
   );
 }
+

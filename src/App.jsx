@@ -19,6 +19,9 @@ import Careers from "./pages/Careers/Careers";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import Privacy from "./pages/PrivacyPolicy/Privacy";
+import Terms from "./pages/TermsCondition/Terms";
+import Pricing from "./pages/Pricing/Pricing";
 
 import "./App.css";
 
@@ -44,6 +47,9 @@ function App() {
           <Route path="/careers/:id" element={<CareerDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
       </main>
 
