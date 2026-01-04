@@ -21,9 +21,9 @@ function Contact() {
       {/* CONTACT INFO */}
       <div className="contact-card">
         <h2>Direct Contact</h2>
-        <p><strong>Email:</strong> info@securenode.com</p>
-        <p><strong>Phone:</strong> +91-1234567890</p>
-        <p><strong>Address:</strong> Mumbai, India</p>
+        <p><strong>Email:</strong> audit@securenode.co.in</p>
+        <p><strong>Phone:</strong> +91 93547956497</p>
+        <p><strong>Address:</strong> Ghaziabad, Uttar Pradesh</p>
       </div>
 
       {/* SOCIAL LINKS */}

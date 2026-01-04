@@ -54,11 +54,37 @@ export default function Footer() {
         <div className="sn-footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><MdLocationOn /> Ghaziabad, Uttar Pradesh</li>
-            <li><MdPhone /> +91 1234567890</li>
-            <li><MdEmail /> info@securenode.com</li>
+            <li>
+              <a
+                href="https://www.google.com/maps?q=Ghaziabad,+Uttar+Pradesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <MdLocationOn /> Ghaziabad, Uttar Pradesh
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="tel:+9193547956497"
+                className="flex items-center gap-2"
+              >
+                <MdPhone /> +91 93547956497
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="mailto:audit@securenode.co.in"
+                className="flex items-center gap-2"
+              >
+                <MdEmail /> audit@securenode.co.in
+              </a>
+            </li>
           </ul>
         </div>
+
 
       </div>
 

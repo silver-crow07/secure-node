@@ -36,9 +36,9 @@ const servicesData = [
   },
   {
     title: "Threat Monitoring",
-    description: "24/7 monitoring and alerting to detect and neutralize threats instantly.",
+    description: "Build security into your app from day one so potential issues are prevented right from the start.",
     image: service6, link: "/services/threat-monitoring",
-  },
+  },  
   {
     title: "Cybersecurity Training",
     description: "Train your staff to identify phishing and other cyberattack attempts.",
